@@ -1,0 +1,38 @@
+.navbar {
+  font-size: 21px;
+  background-color: #C38D9E;
+  height: 75px;
+  line-height: 75px;
+}
+.navbar .logo {
+  vertical-align: middle;
+}
+.navbar .right-section {
+  float: right;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+body {
+  background-color: #E8A87C;
+}
+.container {
+  padding: 0 24px;
+}
+.btn {
+  user-select: none;
+  display: inline-block;
+  background-color: #41B3A3;
+  color: white;
+  cursor: pointer;
+  line-height: 18px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 15px;
+}
+.btn:active {
+  transform: scale(0.975);
+}

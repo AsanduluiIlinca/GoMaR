@@ -1,0 +1,32 @@
+@import '/navbar.less';
+
+html,
+body {
+    margin   : 0;
+    padding  : 0;
+    font-size: @font-size;
+}
+
+body {
+    background-color: @light-orange;
+}
+
+.container {
+    padding: 0 24px;
+}
+
+.btn {
+    user-select     : none;
+    display         : inline-block;
+    background-color: @green;
+    color           : white;
+    cursor          : pointer;
+    line-height     : @font-size;
+    padding         : 10px 20px;
+    margin-left     : 10px;
+    border-radius   : 15px;
+}
+
+.btn:active {
+    transform: scale(0.975);
+}

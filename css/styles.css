@@ -1,11 +1,12 @@
 .navbar {
   font-size: 21px;
-  background-color: #C38D9E;
-  height: 75px;
-  line-height: 75px;
+  background: #36ABCB;
+  height: 60px;
+  line-height: 60px;
 }
 .navbar .logo {
   vertical-align: middle;
+  height: 30px;
 }
 .navbar .right-section {
   float: right;
@@ -17,7 +18,7 @@ body {
   font-size: 18px;
 }
 body {
-  background-color: #E8A87C;
+  background-color: #e9e9e9;
 }
 .container {
   padding: 0 24px;
@@ -25,13 +26,14 @@ body {
 .btn {
   user-select: none;
   display: inline-block;
-  background-color: #41B3A3;
+  background-color: rgba(255, 255, 255, 0.3);
   color: white;
   cursor: pointer;
   line-height: 18px;
-  padding: 10px 20px;
+  font-size: 17px;
+  padding: 5px 15px;
   margin-left: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .btn:active {
   transform: scale(0.975);

@@ -1,27 +1,22 @@
 @import '/navbar.less';
+@import '/file.less';
 
 html,
 body {
-    margin   : 0;
-    padding  : 0;
-    font-size: @font-size;
+    margin          : 0;
+    padding         : 0;
+    height          : 100vh;
+    font-size       : @font-size;
+    background-color: @padding-color;
 }
 
-body {
-    background-color: @font-color;
-}
 
 .container {
-    padding: 0 24px;
-    .title{
-        font-family: "Times New Roman", Times, sans-serif;
-        font-size: 40px;
-        text-align: center;
-        padding: 50px ;
-    }
+    padding: 0 35px;
 }
 
 .btn {
+    font-family     : Cambria;
     user-select     : none;
     display         : inline-block;
     background-color: @light-blue;
@@ -38,3 +33,83 @@ body {
     transform: scale(0.975);
 }
 
+.central-container {
+    min-width       : 50%;
+    max-width       : 60%;
+    margin          : auto;
+    background-color: @font-color;
+    padding         : 0 20px;
+
+    .title {
+        color      : #444444;
+        font-family: Cambria;
+        font-size  : 40px;
+        text-align : center;
+        padding    : 50px;
+    }
+
+    .quiz-question {
+        padding  : 40px;
+        font-size: 20px;
+        color    : #444444;
+    }
+
+    .quiz-selector {
+        padding: 0 40px;
+
+        .answer {
+            border-top   : solid 1px #eee;
+            border-radius: 3px;
+            background   : #ffffff;
+            padding      : 20px;
+            transition   : box-shadow ease-in 100ms;
+            cursor       : pointer;
+
+            .icon {
+                display         : inline-block;
+                width           : 15px;
+                background-color: white;
+                height          : 15px;
+                border          : 2px solid black;
+                border-radius   : 100%;
+            }
+
+            .sentence {}
+
+            >* {
+                display       : inline-block;
+                vertical-align: middle;
+                white-space   : normal;
+            }
+        }
+
+        .answer:after {
+            content       : '';
+            display       : inline-block;
+            height        : 100%;
+            vertical-align: middle;
+            width         : 0;
+        }
+    }
+
+
+    p {
+        color      : #444444;
+        font-family: Cambria;
+    }
+}
+
+.scrollable {
+    overflow-y        : scroll;
+    scrollbar-width   : none;
+    -ms-overflow-style: none;
+}
+
+.scrollable::-webkit-scrollbar {
+    width : 0;
+    height: 0;
+}
+
+@media @mobile-size {}
+
+@media @tablet-size {}

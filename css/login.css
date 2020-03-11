@@ -87,8 +87,13 @@ span p input{
     margin:auto;
     width :35%;
 }
-
-p{
+.boxcontent {
+    border: 10% ;
+    padding: 10%;
+    margin:auto;
+    width :75%;
+}
+input{
     text-align: center;
 }
 

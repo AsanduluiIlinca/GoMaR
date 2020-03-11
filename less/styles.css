@@ -206,7 +206,7 @@ body {
 .central-container .quiz-selector .answer {
   border-top: solid 1px #eee;
   border-radius: 3px;
-  background: white;
+  background: #3b3b3b;
   padding: 20px;
   transition: box-shadow ease-in 100ms;
   cursor: pointer;
@@ -240,12 +240,9 @@ body {
   color: white;
   font-family: Cambria;
   display: inline-block;
-  cursor: pointer;
-  position: relative;
-  float: right;
-  padding: 14px 40px;
-  margin-right: 80px;
-  margin-top: 20px;
+  position: absolute;
+  left: 80px;
+  top: 20px;
   font-size: 17px;
   border-radius: 10px;
 }

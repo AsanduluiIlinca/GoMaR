@@ -244,6 +244,7 @@ body {
   font-family: Cambria;
 }
 .central-container .links {
+  text-align: center;
   color: #444444;
   font-family: Cambria;
   font-size: 15px;
@@ -266,4 +267,9 @@ body {
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+/*Face sa dispara bara de scroll*/
+.scrollable::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }

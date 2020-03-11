@@ -177,17 +177,6 @@ body {
   background-color: #e9e9e9;
   padding: 0 20px;
 }
-.central-container .ilinca {
-  background-color: #36ABCB;
-  color: white;
-  font-family: Cambria;
-  display: inline-block;
-  cursor: pointer;
-  left: 80px;
-  top: 20px;
-  font-size: 17px;
-  border-radius: 10px;
-}
 .central-container .title {
   color: #444444;
   font-family: Cambria;

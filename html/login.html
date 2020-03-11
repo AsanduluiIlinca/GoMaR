@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>GoMaR</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo">
+            <div class="right-section">
+                <div class="btn">
+                    Statistics
+                </div>
+                <div class="btn">
+                    Log out
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="boxcontent">
+           <form name="form" action="./login.html" method="post">
+					<label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+                    
+                    <label><b>Email</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required> 
+
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="password" required> 
+						
+            <p style="text-align:center;">
+                 <input class="button" type="submit" onclick="window.location.href = 'userCVs.html';" value="Login"/> or 
+                 <input class="button"  type="submit" onclick="window.location.href = 'pagina1.html';" value="Sing in"/>
+				 <label >
+                      <input type="checkbox" checked="checked" name="remember" style="text-align:center;"> Remember me
+                 </label>
+              </form>			
+
+	   </div>
+  </div>
+</body>
+
+</html>

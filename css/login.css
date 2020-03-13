@@ -62,27 +62,30 @@ input {
   box-sizing: border-box;
   text-align: center;
 }
-/* 
-span p input {
-  width: 27%;
-  margin-right: 1em;
-} */
 
-/* .center {
-    background-color: #e9e9e9;
-    border: 5% ;
-    padding: 5%;
-    margin:auto;
-    width :35%;
-} */
 .boxcontent {
     border: 5% ;
     padding: 5%;
     margin:auto;
     width :40%;
+    /* height: 100%; */
 }
 
 div {
   display: block;
 }
+
+input#prev:hover,input#next:hover {
+	opacity:1;
+}
+
+.slide {
+  height:100%;
+ 
+}
+
+/* .slider {
+	height:100%;
+	position: relative;
+} */
 

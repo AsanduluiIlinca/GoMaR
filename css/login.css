@@ -1,24 +1,27 @@
 .navbar {
-    position: sticky;
-    top: 0;
-    display: block;
-    font-size: 21px;
-    background: #36ABCB;
-    height: 60px;
-    line-height: 60px;
-  }
+  position: sticky;
+  top: 0;
+  display: block;
+  font-size: 21px;
+  background: #36ABCB;
+  height: 60px;
+  line-height: 60px;
+}
+
 .navbar .logo {
-    vertical-align: middle;
-    height: 30px;
+  vertical-align: middle;
+  height: 30px;
 }
+
 .navbar .right-section {
-    float: right;
+  float: right;
 }
-.navbar + div {
-    height: calc(100% - 60px);
+
+.navbar+div {
+  height: calc(100% - 60px);
 }
-html,
-body {
+
+html, body {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -30,25 +33,42 @@ body {
   padding: 0 35px;
 }
 
+.btn {
+  font-family: Cambria;
+  user-select: none;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+  line-height: 18px;
+  font-size: 17px;
+  padding: 5px 15px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.btn:active {
+  transform: scale(0.975);
+}
+
 .central-container {
-    min-width: 50%;
-    max-width: 60%;
-    min-height: 100%;
-    margin: auto;
-    background-color: #e9e9e9;
-    padding: 0 20px;
+  min-width: 50%;
+  max-width: 60%;
+  margin: auto;
+  background-color: #e9e9e9;
+  padding: 0 20px;
 }
 
 .button {
-    background-color: #8BC34A;
-    color: white;
-    padding: 1rem 1.5rem;
-    margin: 0.8rem 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
+  background-color: #8BC34A;
+  color: white;
+  padding: 1rem 1.5rem;
+  margin: 0.8rem 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
 .button:hover {
   opacity: 0.5;
 }
@@ -64,13 +84,13 @@ input {
 }
 
 .boxcontent {
-    border: 5% ;
-    padding: 5%;
-    margin:auto;
-    width :40%;
-    /* height: 100%; */
+  border: 5%;
+  padding: 5%;
+  margin: auto;
+  width: 40%;
 }
-.boxcontent .p{
+
+.boxcontent .p {
   text-align: center;
 }
 
@@ -78,17 +98,24 @@ div {
   display: block;
 }
 
-input#prev:hover,input#next:hover {
-	opacity:1;
+input#prev:hover, input#next:hover {
+  opacity: 1;
 }
 
 .slide {
-  height:100%;
- 
+  height: 100%;
 }
 
-/* .slider {
-	height:100%;
-	position: relative;
-} */
+.scrollable {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/*Face sa dispara bara de scroll*/
+
+.scrollable::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 

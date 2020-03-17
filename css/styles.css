@@ -11,12 +11,18 @@
   vertical-align: middle;
   height: 30px;
 }
-.navbar .icon {
+.navbar .btn {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.navbar .btn .icon {
   vertical-align: middle;
   height: 20px;
   filter: invert(100%) sepia(2%) saturate(845%) hue-rotate(351deg) brightness(117%) contrast(100%);
 }
-.navbar .btn-section {
+.navbar .btn-label {
+  margin-left: 4px;
   display: inline-block;
 }
 .navbar .right-section {
@@ -24,6 +30,22 @@
 }
 .navbar + div {
   height: calc(100% - 60px);
+}
+@media (max-width: 639px) {
+  .navbar .btn-label {
+    display: none;
+  }
+  .navbar .btn {
+    height: 26.66666667px;
+    line-height: 26.66666667px;
+    padding: 0 15px;
+  }
+  .navbar .icon {
+    height: 20px;
+  }
+  .navbar .logo {
+    height: 20px;
+  }
 }
 input[type=text],
 input[type=password] {
@@ -156,6 +178,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  min-width: 250px;
   font-size: 18px;
   background-color: #3b3b3b;
 }
@@ -179,6 +202,7 @@ body {
   transform: scale(0.975);
 }
 .central-container {
+  height: 100%;
   min-width: 50%;
   max-width: 60%;
   margin: auto;
@@ -234,6 +258,7 @@ body {
   height: 15px;
   border: 2px solid black;
   border-radius: 100%;
+  vertical-align: middle;
 }
 .central-container .quiz-selector .answer > * {
   display: inline-block;
@@ -271,11 +296,6 @@ body {
   font-size: 17px;
   border-radius: 10px;
 }
-.central-container .publicity {
-  color: #444444;
-  font-family: Cambria;
-  font-size: 10px;
-}
 .scrollable {
   overflow-y: scroll;
   scrollbar-width: none;
@@ -287,13 +307,23 @@ body {
   height: 0;
 }
 @media (max-width: 639px) {
-  .navbar .btn-section {
-    display: none;
+  .container {
+    padding: 0 15px;
   }
-  .navbar .btn {
-    height: 15px;
+  .central-container {
+    max-width: 90%;
   }
-  .navbar .logo {
-    height: 20px;
+  .central-container .image {
+    width: 300px;
+    height: 150px;
+  }
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .central-container {
+    max-width: 75%;
+  }
+  .central-container .image {
+    width: 400px;
+    height: 200px;
   }
 }

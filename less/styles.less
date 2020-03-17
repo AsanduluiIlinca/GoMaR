@@ -6,6 +6,7 @@ body {
     margin          : 0;
     padding         : 0;
     height          : 100vh;
+    min-width       : 250px;
     font-size       : @font-size;
     background-color: @padding-color;
 }
@@ -34,6 +35,7 @@ body {
 }
 
 .central-container {
+    height          : 100%;
     min-width       : 50%;
     max-width       : 60%;
     margin          : auto;
@@ -94,6 +96,7 @@ body {
                 height          : 15px;
                 border          : 2px solid black;
                 border-radius   : 100%;
+                vertical-align  : middle;
             }
 
 
@@ -158,20 +161,27 @@ body {
 }
 
 @media @mobile-size {
-    .navbar {
-        .btn-section {
-            display: none;
-        }
-
-        .btn {
-            height: @nav-height / 4;
-        }
-
-        .logo {
-            height: @nav-height / 3;
-        }
+    .container {
+        padding: 0 15px;
     }
 
+    .central-container {
+        max-width: 90%;
+
+        .image {
+            width : 300px;
+            height: 150px;
+        }
+    }
 }
 
-@media @tablet-size {}
+@media @tablet-size {
+    .central-container {
+        max-width: 75%;
+
+        .image {
+            width : 400px;
+            height: 200px;
+        }
+    }
+}

@@ -289,6 +289,11 @@ body {
 @media (max-width: 639px) {
   .navbar .btn-section {
     display: none;
-    background-color: red;
+  }
+  .navbar .btn {
+    height: 15px;
+  }
+  .navbar .logo {
+    height: 20px;
   }
 }

@@ -141,11 +141,7 @@ body {
         border-radius   : 10px;
     }
 
-    .publicity {
-        color      : #444444;
-        font-family: Cambria;
-        font-size  : 10px;
-    }
+
 }
 
 
@@ -164,9 +160,18 @@ body {
 @media @mobile-size {
     .navbar {
         .btn-section {
-            display         : none;
+            display: none;
+        }
+
+        .btn {
+            height: @nav-height / 4;
+        }
+
+        .logo {
+            height: @nav-height / 3;
         }
     }
+
 }
 
 @media @tablet-size {}

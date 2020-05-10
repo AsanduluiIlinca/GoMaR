@@ -22,16 +22,20 @@
                 <form name="form" action="./register.html" method="post">
 
                         <label><b>First Name</b></label>
-                        <input type="text" placeholder="Enter Username" name="username" required>
+                        <input type="text" placeholder="Enter first name" name="username" required>
                         
                         <label><b>Last Name</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required> 
+                        <input type="text" placeholder="Enter last name" name="email" required> 
 
                         <label><b>Birthday</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" required> 
+                        <input type="date" name="birthday">
                             
                         <label><b>Gender</b></label>
-                        <input type="password" placeholder="Confirm Password" name="password" required> 
+                        <select id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        <!-- <input type="password" placeholder="Confirm Password" name="password" required>  -->
                     
                 </form>		
                 <input class="button" id="next"type="submit" onclick="window.location.href ='#slider-2';" value="Next">
@@ -42,16 +46,19 @@
             <div class="boxcontent">
                 <form name="form" action="./register.html" method="post">
                         <label><b>Social status</b></label>
-                        <input type="text" placeholder="Enter Username" name="username" required>
+                        <input type="text" placeholder=" Enter status" name="status" required>
                         
                         <label><b>Employed/Unemployed</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required> 
+                        <select id="job">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
 
                         <label><b>Working place</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" required> 
+                        <input type="text" placeholder=" Enter working place" name="work" required> 
                             
                         <label><b>Job</b></label>
-                        <input type="password" placeholder="Confirm Password" name="password" required> 
+                        <input type="text" placeholder="Enter job" name="job" required> 
                         
                 </form>		
                 <input class="button" id="prev"type="submit" onclick="window.location.href ='#slider-1';" value="Back">
@@ -63,16 +70,16 @@
             <div class="boxcontent">
                 <form name="form" action="./register.html" method="post">
                         <label><b>Country</b></label>
-                        <input type="text" placeholder="Enter Username" name="username" required>
+                        <input type="text" placeholder="Country name" name="counry" required>
                         
                         <label><b>Town</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required> 
+                        <input type="text" placeholder="Town" name="town" required> 
 
                         <label><b>Ethnicity</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" required> 
+                        <input type="test" placeholder="Ethnicity" name="ethn" required> 
                             
                         <label><b>Languages</b></label>
-                        <input type="password" placeholder="Confirm Password" name="password" required> 
+                        <input type="test" placeholder="Language" name="lang" required> 
                 </form>	
                 <input class="button" id="prev"type="submit" onclick="window.location.href ='#slider-2';" value="Back">
                 <input class="button" id="next"type="submit" onclick="window.location.href ='landing.html';" value="Next">		

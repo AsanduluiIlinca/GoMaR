@@ -3,7 +3,6 @@ CREATE TABLE user (
      username VARCHAR(40) NOT NULL,
      email VARCHAR(70) NOT NULL,
      password VARCHAR(50) NOT NULL,
-     score INT,
      admin BOOLEAN NOT NULL,
      firstname VARCHAR(70) NOT NULL,
      lastname VARCHAR(70) NOT NULL,
@@ -37,6 +36,7 @@ CREATE TABLE test_visit (
      id INT NOT NULL AUTO_INCREMENT,
      user_id INT NOT NULL,
      test_id INT NOT NULL,
+     score INT,
      PRIMARY KEY (id),
      FOREIGN KEY (user_id) REFERENCES user(id),
      FOREIGN KEY (test_id) REFERENCES test(id)
@@ -55,6 +55,7 @@ CREATE TABLE answer (
      id INT NOT NULL AUTO_INCREMENT,
      question_id INT NOT NULL,
      answer VARCHAR(255),
+     valid BOOLEAN,
      PRIMARY KEY (id),
      FOREIGN KEY (question_id) REFERENCES question(id)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;

@@ -13,12 +13,7 @@
     $stmt->bindParam(':username', $_POST['username']);
     $stmt->bindParam(':email', $_POST['email']);
     $stmt->bindParam(':password', $password);
-
-    // if( $stmt->execute() ):
-    //   $message = 'Successfully created new user';
-    // else:
-    //   $message = 'Sorry there must have been an issue creating your account';
-    // endif;
+    $stmt->execute();
 
   endif;
 ?>
@@ -42,10 +37,6 @@
     </div>
     <div class="central-container scrollable">
         <div class="boxcontent">
-        <!-- <?php if(!empty($message)): ?>
-            <p><?= $message ?></p>
-        <?php endif; ?> -->
-
            <form name="form" action="./register.php" method="POST">
 					<label><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="username" required>

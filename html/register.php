@@ -7,7 +7,7 @@
   if(!empty($_POST['username']) && !empty($_POST['password'])):
     header("Location: profile.html");
     // Enter the new user in the database
-    $sql = "INSERT INTO user (username, email, password) VALUES (:username, :email, :password)";
+    $sql = "INSERT INTO user (username, email, password) VALUES (:username, :email, :password   )";
     $stmt = $conn->prepare($sql);
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
     $stmt->bindParam(':username', $_POST['username']);
@@ -16,6 +16,7 @@
     $stmt->execute();
 
   endif;
+  
 ?>
     
 <!doctype html>

@@ -2,7 +2,7 @@ CREATE TABLE user (
      id INT NOT NULL AUTO_INCREMENT,
      username VARCHAR(40) NOT NULL,
      email VARCHAR(70) NOT NULL,
-     password VARCHAR(50) NOT NULL,
+     password VARCHAR(255) NOT NULL,
      admin BOOLEAN NOT NULL,
      firstname VARCHAR(70) NOT NULL,
      lastname VARCHAR(70) NOT NULL,

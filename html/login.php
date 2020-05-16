@@ -13,7 +13,6 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) :
    //echo '<pre>'; print_r($results); echo '</pre>';
 
    $message = '';
-   $var = password_verify($_POST['password'], $results['password']);
 
    if (count($results) > 0 && password_verify($_POST['password'], $results['password']) && $results['admin'] == '1') {
 

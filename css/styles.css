@@ -281,9 +281,9 @@ body {
   display: inline-block;
   cursor: pointer;
   position: relative;
-  float: right;
   padding: 14px 40px;
   margin-right: 80px;
+  margin-left: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 17px;
@@ -350,13 +350,9 @@ body {
   border-radius: 10px;
   max-width: 170px;
   overflow: hidden;
-  left: 30%;
 }
 .central-container .test-div {
   margin-left: 20px;
-  font-family: Cambria;
-  text-align: center;
-  padding: 10px;
 }
 .scrollable {
   overflow-y: scroll;

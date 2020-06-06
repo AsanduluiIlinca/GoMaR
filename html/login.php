@@ -62,7 +62,7 @@ endif;
 
             <p class="p">
             <input class="button" type="submit" value="Log in"/> or 
-               <input class="button" type="submit" onclick="window.location.href = 'login.php';" value="Register" />
+               <input class="button" type="submit" onclick="window.location.href = 'register.php';" value="Register" />
                <label>
                   <input type="checkbox" checked="checked" name="remember" style="text-align:center;"> Remember me
                </label>

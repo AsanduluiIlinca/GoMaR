@@ -2,10 +2,10 @@
   session_start();
   include 'databaseConnection.php';
 
-  $message = '';
+//   $message = '';
 
   if(!empty($_POST['username']) && !empty($_POST['password'])):
-    header("Location: profile.html");
+    
     // Enter the new user in the database
     $sql = "INSERT INTO user (username, email, password) VALUES (:username, :email, :password)";
     $stmt = $conn->prepare($sql);
@@ -14,6 +14,16 @@
     $stmt->bindParam(':email', $_POST['email']);
     $stmt->bindParam(':password', $password);
     $stmt->execute();
+
+    $_SESSION['username']= $_POST['username'];
+    // $_SESSION['email']=$_POST['email'];
+    // $_SESSION['pass']=$password;
+    // echo '<pre>'; print_r($_SESSION['username']); echo '</pre>';
+   
+    if(isset($_SESSION['username'])){
+        header("Location: profile.php");
+    }
+   
 
   endif;
   
@@ -52,7 +62,7 @@
 					<input type="password" placeholder="Confirm Password" name="password" required> 
 						
             <p style="text-align:center;">
-                 <input class="button" type="submit" onclick="window.location.href = 'profile.html';" value="Create Account"/> 
+                 <input class="button" type="submit" onclick="window.location.href = 'profile.php';" value="Create Account"/> 
             </p>
             </form>			
 	   </div>

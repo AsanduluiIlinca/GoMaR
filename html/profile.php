@@ -144,7 +144,10 @@
             
                 <form name="form2" action="" method="POST">
                         <label><b>Social status</b></label>
-                        <input type="text" placeholder=" Enter status" name="social_status" required>
+                        <select name="social_status" required>
+                            <option value="Married">Married</option>
+                            <option value="Unmarried">Unmarried</option>
+                        </select>
                         
                         <label><b>Employee</b></label>
                         <select name="employed">

@@ -1,31 +1,73 @@
 <?php  
   session_start();
   include 'databaseConnection.php';
+  error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 //   $message = '';
 
-  if(!empty($_POST['username']) && !empty($_POST['password'])):
+  // if(!empty($_POST['username']) && !empty($_POST['password'])):
     
     // Enter the new user in the database
-    $sql = "INSERT INTO user (username, email, password) VALUES (:username, :email, :password)";
-    $stmt = $conn->prepare($sql);
-    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    $stmt->bindParam(':username', $_POST['username']);
-    $stmt->bindParam(':email', $_POST['email']);
-    $stmt->bindParam(':password', $password);
-    $stmt->execute();
+    // $sql = "INSERT INTO user (username, email, password) VALUES (:username, :email, :password)";
+    // $stmt = $conn->prepare($sql);
+    // $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    // $passwordConf = password_hash($_POST['passwordConf'], PASSWORD_BCRYPT);
+    // $stmt->bindParam(':username', $_POST['username']);
+    // $stmt->bindParam(':email', $_POST['email']);
+    // $stmt->bindParam(':password', $password);
+    // $stmt->execute();
 
-    $_SESSION['username']= $_POST['username'];
-    // $_SESSION['email']=$_POST['email'];
-    // $_SESSION['pass']=$password;
-    // echo '<pre>'; print_r($_SESSION['username']); echo '</pre>';
-   
-    if(isset($_SESSION['username'])){
-        header("Location: profile.php");
+    // $_SESSION['username']= $_POST['username'];
+    $message = '';
+    if(empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['passwordConf']))
+    {
+        $message = "Complete all the fields!";
     }
+
+    if($_POST['password'] != $_POST['passwordConf'])
+    {
+      $message = "Passwords do not match!";
+    }
+
+    if(empty($message))
+    {
+      $dataBD = $conn->prepare("SELECT username from user WHERE username=:username");
+      $dataBD -> bindParam(':username',  $_POST['username']);
+      $dataBD -> execute();
+      // echo '<pre>'; print_r( $_POST['username']); echo '</pre>';
+
+      if ($dataBD->rowCount() > 0)
+      {
+        $message = "Username already exists , please choose another one!";
+      }
+      else
+      {
+        $sql = "INSERT INTO user (username, email, password) VALUES (:username, :email, :password)";
+        $stmt = $conn->prepare($sql);
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        $passwordConf = password_hash($_POST['passwordConf'], PASSWORD_BCRYPT);
+        $stmt->bindParam(':username', $_POST['username']);
+        $stmt->bindParam(':email', $_POST['email']);
+        $stmt->bindParam(':password', $password);
+        $stmt->execute();
+
+        $_SESSION['username']= $_POST['username'];
+
+        if(isset($_SESSION['username']))
+        {
+          header("Location: profile.php");
+        }
+      }
+    }
+    // else
+    // {
+    //   $message = "error occured!";
+    // }
+
+    
    
 
-  endif;
+  // endif;
   
 ?>
     
@@ -58,9 +100,11 @@
 					<label><b>Password</b></label>
 					<input type="password" placeholder="Enter Password" name="password" required> 
                         
-                    <label><b>Password</b></label>
-					<input type="password" placeholder="Confirm Password" name="password" required> 
-						
+          <label><b>Password</b></label>
+					<input type="password" placeholder="Confirm Password" name="passwordConf" required> 
+          <?php if (!empty($message)) : ?>
+                  <p><?= $message ?></p>
+               <?php endif; ?>
             <p style="text-align:center;">
                  <input class="button" type="submit" onclick="window.location.href = 'profile.php';" value="Create Account"/> 
             </p>

@@ -25,30 +25,23 @@ CREATE TABLE category (
      PRIMARY KEY (id)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
-CREATE TABLE test (
-     id INT NOT NULL AUTO_INCREMENT,
-     category_id INT NOT NULL,
-     PRIMARY KEY (id),
-     FOREIGN KEY (category_id) REFERENCES category(id)
- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
-
-CREATE TABLE test_visit (
+CREATE TABLE category_score (
      id INT NOT NULL AUTO_INCREMENT,
      user_id INT NOT NULL,
-     test_id INT NOT NULL,
+     category_id INT NOT NULL,
      score INT,
      PRIMARY KEY (id),
      FOREIGN KEY (user_id) REFERENCES user(id),
-     FOREIGN KEY (test_id) REFERENCES test(id)
+     FOREIGN KEY (category_id) REFERENCES category(id)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 CREATE TABLE question (
      id INT NOT NULL AUTO_INCREMENT,
-     test_id INT NOT NULL,
+     category_id INT NOT NULL,
      question VARCHAR(255),
      difficulty INT,
      PRIMARY KEY (id),
-     FOREIGN KEY (test_id) REFERENCES test(id)
+     FOREIGN KEY (category_id) REFERENCES category(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 CREATE TABLE answer (

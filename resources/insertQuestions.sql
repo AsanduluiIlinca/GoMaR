@@ -1,6 +1,6 @@
 INSERT INTO question (
     id,
-    test_id,
+    category_id,
     question, 
     difficulty
 )

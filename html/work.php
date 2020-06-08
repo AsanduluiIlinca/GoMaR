@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include 'databaseConnection.php';
+    echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+?>
 <!doctype html>
 
 <html lang="en">
@@ -29,7 +34,7 @@
     <div class="container">
         <div class="central-container scrollable">
             <div class="title">
-                Society
+                Work
             </div>
             <div class="description">
                 <ul>
@@ -40,31 +45,33 @@
                         </div>
                     </li>
                     <li>
-                        <div class="title-of-article">Society</div>
+                        <div class="title-of-article">HoW to behave at work</div>
                         <p class="links">(Click on the image if you want to visit our resources.) </p>
                         <a
-                            href="https://en.wikipedia.org/wiki/Society">
-                            <img class="image" src="../resources/society-wiki.png">
+                            href="https://www.wikihow.com/Behave-at-Work">
+                            <img class="image" src="../resources/how-to-behave-at-work.png">
                         </a>
+
                     </li>
                     <li>
-                        <div class="title-of-article">Importance of Communication in Society</div>
+                        <div class="title-of-article">How to dress at work</div>
                         <a
-                            href="https://www.academia.edu/20198715/Importance_of_Communication_in_Society">
-                            <img class="image" src="../resources/importance-of-communication.png">
+                            href="http://www.executivestyle.com.au/20-tips-to-dress-appropriately-for-work-2xvcy">
+                            <img class="image" src="../resources/how-to-dress.png">
+                        </a>
+
+                    </li>
+                    <li>
+                        <div class="title-of-article">How to Communicate More Effectively in the Workplace</div>
+                        <a href="https://blog.dce.harvard.edu/professional-development/how-communicate-more-effectively-workplace">
+                            <img class="image" src="../resources/communicate-work.png">
                         </a>
                     </li>
                     <li>
-                        <div class="title-of-article">How Does Society Influence One’s Behavior?</div>
-                        <a href="https://thedecisionlab.com/impact-social-components-human-behaviour/">
-                            <img class="image" src="../resources/society-influence.png">
-                        </a>
-                    </li>
-                    <li>
-                        <div class="title-of-article">Communication in Today’s Society</div>
+                        <div class="title-of-article">A positive work environment</div>
                         <a
-                            href="https://www.fnu.edu/communication-todays-society/">
-                            <img class="image" src="../resources/communication-society.png">
+                            href="https://www.hongkiat.com/blog/positive-working-environment/">
+                            <img class="image" src="../resources/workplace-environment.png">
                         </a>
                     </li>
                 </ul>

@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include 'databaseConnection.php';
+    echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+?>
 <!doctype html>
 
 <html lang="en">
@@ -29,44 +34,44 @@
     <div class="container">
         <div class="central-container scrollable">
             <div class="title">
-                Family
+                Groups
             </div>
             <div class="description">
                 <ul>
                     <li>
                         <div class="test-div">
                             <p>If you want to test your ability, take a test. Or read our recomandation before.</p>
-                            <span class="btnn" onclick="window.location.href = 'test.html';">Test</span>
+                            <span class="btnn" onclick="window.location.href = 'test.php';">Test</span>
                         </div>
                     </li>
                     <li>
-                        <div class="title-of-article">Meaning of Family</div>
+                        <div class="title-of-article">Social group</div>
                         <p class="links">(Click on the image if you want to visit our resources.) </p>
                         <a
-                            href="https://family.lovetoknow.com/about-family-values/meaning-family">
-                            <img class="image" src="../resources/meaningOfFamily.png">
+                            href="https://en.wikipedia.org/wiki/Social_group">
+                            <img class="image" src="../resources/group-wiki.png">
                         </a>
 
                     </li>
                     <li>
-                        <div class="title-of-article">Family</div>
+                        <div class="title-of-article">Types of Groups</div>
                         <a
-                            href="https://en.wikipedia.org/wiki/Family">
-                            <img class="image" src="../resources/family-wiki.png.">
+                            href="https://courses.lumenlearning.com/sociology/chapter/types-of-groups/">
+                            <img class="image" src="../resources/types-group.png">
                         </a>
 
                     </li>
                     <li>
-                        <div class="title-of-article">What does family mean for you, and how has it shaped you?</div>
-                        <a href="https://medium.com/sandbox/what-does-family-mean-for-you-and-how-has-it-shaped-you-8cbc1aaaee02">
-                            <img class="image" src="../resources/shaped.png">
+                        <div class="title-of-article">Groups of people</div>
+                        <a href="https://www.macmillanthesaurus.com/topics/groups-of-people">
+                            <img class="image" src="../resources/group-of-people.png">
                         </a>
                     </li>
                     <li>
-                        <div class="title-of-article">What does family mean to you?</div>
+                        <div class="title-of-article">What are social groups and social networks?</div>
                         <a
-                            href="https://www.travelance.ca/blog/family-mean/">
-                            <img class="image" src="../resources/what-family-meaning.png">
+                            href="https://www.khanacademy.org/test-prep/mcat/society-and-culture/social-structures/a/what-are-social-groups-and-social-networks">
+                            <img class="image" src="../resources/what-are-social-groups.png">
                         </a>
                     </li>
                 </ul>

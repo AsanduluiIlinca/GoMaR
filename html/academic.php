@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include 'databaseConnection.php';
+    echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+?>
 <!doctype html>
 
 <html lang="en">
@@ -36,7 +41,7 @@
                     <li>
                         <div class="test-div">
                             <p>If you want to test your ability, take a test. Or read our recomandation before.</p>
-                            <span class="btnn" onclick="window.location.href = 'test.html';">Test</span>
+                            <span class="btnn" onclick="window.location.href = 'test.php';">Test</span>
                         </div>
                     </li>
                     <li>

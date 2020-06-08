@@ -38,49 +38,39 @@
               
                 <div class="slides">
                   <div id="slide-1">
-                    <a href="academic.html">
-                        <img class="image" src="../resources/academic1.jpg">
+                    <a href="setCategory.php?categoryName=academic" onclick="post">
+                        <input type="image" class="image" src="../resources/academic1.jpg" name="academic">
                     </a>
                     <div class="category-title">Academic</div>
-                    <!-- <a class="prev" href="#slide-5">&#10094;</a>
-                    <a class="next" href="#slide-2">&#10095;</a> -->
-                    <!-- 1 -->
+                
                   </div>
                   <div id="slide-2">
-                    <a href="family.html">
-                        <img class="image" src="../resources/family2.jpg">
+                    <a href="setCategory.php?categoryName=family" onclick="post">
+                        <input type="image" class="image" src="../resources/family2.jpg">
                     </a>
                     <div class="category-title">Family</div>
-                    <!-- <a class="prev" href="#slide-1">&#10094;</a>
-                    <a class="next" href="#slide-3">&#10095;</a> -->
-                    <!-- 2 -->
+                   
                   </div>
                   <div id="slide-3">
-                    <a  href="group.html">
-                        <img class="image" src="../resources/group.jpg">
+                    <a  href="setCategory.php?categoryName=group" onclick="post">
+                        <input type="image" class="image" src="../resources/group.jpg">
                     </a>
                     <div class="category-title">Group</div>
-                    <!-- <a class="prev" href="#slide-2">&#10094;</a>
-                    <a class="next" href="#slide-4">&#10095;</a> -->
-                    <!-- 3 -->
+                   
                   </div>
                   <div id="slide-4">
-                    <a href="society.html">
-                        <img class="image" src="../resources/society.jpg">
+                    <a href="setCategory.php?categoryName=society" onclick="post">
+                        <input type="image" class="image" src="../resources/society.jpg">
                     </a>
                     <div class="category-title">Society</div>
-                    <!-- <a class="prev" href="#slide-3">&#10094;</a>
-                    <a class="next" href="#slide-5">&#10095;</a> -->
-                    <!-- 4 -->
+                   
                   </div>
                   <div id="slide-5">
-                    <a href="work.html">
-                        <img class="image" src="../resources/work.jpg">
+                    <a href="setCategory.php?categoryName=work" onclick="post">
+                        <input type="image" class="image" src="../resources/work.jpg">
                     </a>
                     <div class="category-title">Work</div>
-                    <!-- <a class="prev" href="#slide-4">&#10094;</a> -->
-                    <!-- <a class="next" href="#slide-1">&#10095;</a> -->
-                    <!-- 5 -->
+                   
                   </div>
                 </div>
               </div>

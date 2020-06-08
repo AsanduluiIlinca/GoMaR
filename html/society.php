@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include 'databaseConnection.php';
+    echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+?>
 <!doctype html>
 
 <html lang="en">
@@ -29,44 +34,42 @@
     <div class="container">
         <div class="central-container scrollable">
             <div class="title">
-                Groups
+                Society
             </div>
             <div class="description">
                 <ul>
                     <li>
                         <div class="test-div">
                             <p>If you want to test your ability, take a test. Or read our recomandation before.</p>
-                            <span class="btnn" onclick="window.location.href = 'test.html';">Test</span>
+                            <span class="btnn" onclick="window.location.href = 'test.php';">Test</span>
                         </div>
                     </li>
                     <li>
-                        <div class="title-of-article">Social group</div>
+                        <div class="title-of-article">Society</div>
                         <p class="links">(Click on the image if you want to visit our resources.) </p>
                         <a
-                            href="https://en.wikipedia.org/wiki/Social_group">
-                            <img class="image" src="../resources/group-wiki.png">
+                            href="https://en.wikipedia.org/wiki/Society">
+                            <img class="image" src="../resources/society-wiki.png">
                         </a>
-
                     </li>
                     <li>
-                        <div class="title-of-article">Types of Groups</div>
+                        <div class="title-of-article">Importance of Communication in Society</div>
                         <a
-                            href="https://courses.lumenlearning.com/sociology/chapter/types-of-groups/">
-                            <img class="image" src="../resources/types-group.png">
-                        </a>
-
-                    </li>
-                    <li>
-                        <div class="title-of-article">Groups of people</div>
-                        <a href="https://www.macmillanthesaurus.com/topics/groups-of-people">
-                            <img class="image" src="../resources/group-of-people.png">
+                            href="https://www.academia.edu/20198715/Importance_of_Communication_in_Society">
+                            <img class="image" src="../resources/importance-of-communication.png">
                         </a>
                     </li>
                     <li>
-                        <div class="title-of-article">What are social groups and social networks?</div>
+                        <div class="title-of-article">How Does Society Influence One’s Behavior?</div>
+                        <a href="https://thedecisionlab.com/impact-social-components-human-behaviour/">
+                            <img class="image" src="../resources/society-influence.png">
+                        </a>
+                    </li>
+                    <li>
+                        <div class="title-of-article">Communication in Today’s Society</div>
                         <a
-                            href="https://www.khanacademy.org/test-prep/mcat/society-and-culture/social-structures/a/what-are-social-groups-and-social-networks">
-                            <img class="image" src="../resources/what-are-social-groups.png">
+                            href="https://www.fnu.edu/communication-todays-society/">
+                            <img class="image" src="../resources/communication-society.png">
                         </a>
                     </li>
                 </ul>

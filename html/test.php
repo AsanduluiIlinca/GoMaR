@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    include 'databaseConnection.php';
+    echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+?>
+
+
 <!doctype html>
 
 <html lang="en">

@@ -10,8 +10,6 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) :
    $records->execute();
    $results = $records->fetch(PDO::FETCH_ASSOC);
 
-   //echo '<pre>'; print_r($results); echo '</pre>';
-
    $message = '';
 
    if (count($results) > 0 && password_verify($_POST['password'], $results['password']) && $results['admin'] == '1') {

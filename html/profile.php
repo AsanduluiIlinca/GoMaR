@@ -4,8 +4,14 @@
     
     $username = $_SESSION['username'];
 
+    $records = $conn->prepare('SELECT * FROM user WHERE username = :username');
+    $records->bindParam(':username', $_SESSION['username']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['user_id'] = $results['id'];
+
     // echo '<pre>'; print_r($username); echo '</pre>';
-    // echo '<pre>'; print_r($_POST); echo '</pre>';
+    // echo '<pre>'; print_r($_SESSION); echo '</pre>';
     if(isset($_POST['submit_1']))
     {
         try

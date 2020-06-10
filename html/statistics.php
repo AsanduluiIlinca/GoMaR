@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include 'databaseConnection.php';
+    echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+?>
 <!doctype html>
 
 <html lang="en">
@@ -27,8 +32,8 @@
     </div>
     <div class="container">
         <div class="central-container scrollable">
-            <span class="b" onclick="window.location.href = 'statistics.html';">Scoreboard</span>
-            <span class="b" onclick="window.location.href = 'statistics.html';">My progress</span>
+            <span class="b" onclick="window.location.href = 'statistics.php';">Scoreboard</span>
+            <span class="b" onclick="window.location.href = 'statistics.php';">My progress</span>
         </div>
     </div>
 </body>

@@ -71,15 +71,20 @@
             }
         }
     }
-    // echo '<pre>'; print_r( $_POST['answer1']); echo '</pre>';
-    // echo '<pre>'; print_r( $_POST['answer2']); echo '</pre>';
-    // if(!empty($_POST['answer1']))
-    // {
-    //     echo '<pre>'; print_r( $_POST['answer1']); echo '</pre>';
-    // }
+
     $_SESSION['questionAnswer']= $questionArray;
     // echo '<pre>'; print_r( $questionArray); echo '</pre>';
-   
+    if(isset($_POST['submit']))
+    {   
+        // echo '<pre>'; print_r( $_POST['answer0']); echo '</pre>';
+        if(isset($_POST['answer0']) && isset($_POST['answer1']) && isset($_POST['answer2']) && isset($_POST['answer3']) && isset($_POST['answer4']) && isset($_POST['answer5']) && isset($_POST['answer6']))
+        {
+            $_SESSION['selectedAnswers'] = array($_POST['answer0'],$_POST['answer1'],$_POST['answer2'],$_POST['answer3'],$_POST['answer4'],$_POST['answer5'],$_POST['answer6']);
+            // $_SESSION['test'] = $_POST['answer0'];
+            header("Location: score.php");
+        }
+       
+    }
 
 ?>
 
@@ -111,7 +116,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <form class="container" action="./test.php" method="POST">
         <div class="central-container scrollable">
             <div class="quiz-question">
                 <p class="question">
@@ -120,13 +125,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="radio" name="answer0" value="$questionArray[0]['answer'][0]['valid']">
+                    <input type="radio" name="answer0" value = "<?= $questionArray[0]['answers'][0]['valid']?>" >
                     <span class="sentence">
                         <?php echo $questionArray[0]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="radio" name="answer0" value="$questionArray[0]['answer'][1]['valid']">
+                    <input type="radio" name="answer0" value="<?= $questionArray[0]['answers'][1]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[0]['answers'][1]['answer']; ?>
                     </span>
@@ -139,13 +144,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="radio" name="answer1" value="$questionArray[1]['answer'][0]['valid']">
+                    <input type="radio" name="answer1" value="<?= $questionArray[1]['answers'][0]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[1]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="radio" name="answer1" value="$questionArray[1]['answer'][1]['valid']">
+                    <input type="radio" name="answer1" value="<?= $questionArray[1]['answers'][1]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[1]['answers'][1]['answer']; ?>
                     </span>
@@ -158,13 +163,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="radio" name="answer2" value="$questionArray[2]['answer'][0]['valid']">
+                    <input type="radio" name="answer2" value="<?= $questionArray[2]['answers'][0]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[2]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="radio" name="answer2" value="$questionArray[2]['answer'][1]['valid']">
+                    <input type="radio" name="answer2" value="<?= $questionArray[2]['answers'][1]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[2]['answers'][1]['answer']; ?>
                     </span>
@@ -177,13 +182,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="radio" name="answer3" value="$questionArray[3]['answer'][0]['valid']">
+                    <input type="radio" name="answer3" value="<?= $questionArray[3]['answers'][0]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[3]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="radio" name="answer3" value="$questionArray[3]['answer'][1]['valid']">
+                    <input type="radio" name="answer3" value="<?= $questionArray[3]['answers'][1]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[3]['answers'][1]['answer']; ?>
                     </span>
@@ -196,13 +201,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="radio" name="answer4" value="$questionArray[4]['answer'][0]['valid']">
+                    <input type="radio" name="answer4" value="<?= $questionArray[4]['answers'][0]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[4]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="radio" name="answer4" value="$questionArray[4]['answer'][1]['valid']">
+                    <input type="radio" name="answer4" value="<?= $questionArray[4]['answers'][1]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[4]['answers'][1]['answer']; ?>
                     </span>
@@ -215,13 +220,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="radio" name="answer5" value="$questionArray[5]['answer'][0]['valid']">
+                    <input type="radio" name="answer5" value="<?= $questionArray[5]['answers'][0]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[5]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="radio" name="answer5" value="$questionArray[5]['answer'][1]['valid']">
+                    <input type="radio" name="answer5" value="<?= $questionArray[5]['answers'][1]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[5]['answers'][1]['answer']; ?>
                     </span>
@@ -234,22 +239,25 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="radio" name="answer6" value="$questionArray[6]['answer'][0]['valid']">
+                    <input type="radio" name="answer6" value="<?= $questionArray[6]['answers'][0]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[6]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="radio" name="answer6" value="$questionArray[6]['answer'][1]['valid']">
+                    <input type="radio" name="answer6" value="<?= $questionArray[6]['answers'][1]['valid']?>">
                     <span class="sentence">
                         <?php echo $questionArray[6]['answers'][1]['answer']; ?>
                     </span>
                 </div>
+                
+                  <p><?php echo "Please make sure all questions have an answer before you submit the test!"; ?></p>
+               
             <div>
-                <span class="answer-btn" onclick="window.location.href = 'test.php';">Sent your answers</span>
+                <input class="answer-btn" type="submit" name="submit" onclick="post" value='Sent your answers'>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 
 </html>

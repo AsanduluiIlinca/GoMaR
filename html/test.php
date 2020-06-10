@@ -120,13 +120,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="checkbox" id="answer1" name="answer1" value="$questionArray[0]['answer'][0]['valid']">
+                    <input type="radio" name="answer0" value="$questionArray[0]['answer'][0]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[0]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="checkbox" id="answer2" name="answer2" value="$questionArray[0]['answer'][1]['valid']">
+                    <input type="radio" name="answer0" value="$questionArray[0]['answer'][1]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[0]['answers'][1]['answer']; ?>
                     </span>
@@ -139,13 +139,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="checkbox" id="answer1" name="answer3" value="$questionArray[1]['answer'][0]['valid']">
+                    <input type="radio" name="answer1" value="$questionArray[1]['answer'][0]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[1]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="checkbox" id="answer2" name="answer4" value="$questionArray[1]['answer'][1]['valid']">
+                    <input type="radio" name="answer1" value="$questionArray[1]['answer'][1]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[1]['answers'][1]['answer']; ?>
                     </span>
@@ -158,13 +158,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="checkbox" id="answer1" name="answer5" value="$questionArray[2]['answer'][0]['valid']">
+                    <input type="radio" name="answer2" value="$questionArray[2]['answer'][0]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[2]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="checkbox" id="answer2" name="answer6" value="$questionArray[2]['answer'][1]['valid']">
+                    <input type="radio" name="answer2" value="$questionArray[2]['answer'][1]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[2]['answers'][1]['answer']; ?>
                     </span>
@@ -177,13 +177,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="checkbox" id="answer1" name="answer7" value="$questionArray[3]['answer'][0]['valid']">
+                    <input type="radio" name="answer3" value="$questionArray[3]['answer'][0]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[3]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="checkbox" id="answer2" name="answer8" value="$questionArray[3]['answer'][1]['valid']">
+                    <input type="radio" name="answer3" value="$questionArray[3]['answer'][1]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[3]['answers'][1]['answer']; ?>
                     </span>
@@ -196,13 +196,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="checkbox" id="answer1" name="answer9" value="$questionArray[4]['answer'][0]['valid']">
+                    <input type="radio" name="answer4" value="$questionArray[4]['answer'][0]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[4]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="checkbox" id="answer2" name="answer10" value="$questionArray[4]['answer'][1]['valid']">
+                    <input type="radio" name="answer4" value="$questionArray[4]['answer'][1]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[4]['answers'][1]['answer']; ?>
                     </span>
@@ -215,13 +215,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="checkbox" id="answer1" name="answer11" value="$questionArray[5]['answer'][0]['valid']">
+                    <input type="radio" name="answer5" value="$questionArray[5]['answer'][0]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[5]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="checkbox" id="answer2" name="answer12" value="$questionArray[5]['answer'][1]['valid']">
+                    <input type="radio" name="answer5" value="$questionArray[5]['answer'][1]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[5]['answers'][1]['answer']; ?>
                     </span>
@@ -234,13 +234,13 @@
             </div>
             <div class="quiz-selector">
                 <div class="answer">
-                    <input type="checkbox" id="answer1" name="answer13" value="$questionArray[6]['answer'][0]['valid']">
+                    <input type="radio" name="answer6" value="$questionArray[6]['answer'][0]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[6]['answers'][0]['answer']; ?>
                     </span>
                 </div>
                 <div class="answer">
-                    <input type="checkbox" id="answer2" name="answer14" value="$questionArray[6]['answer'][1]['valid']">
+                    <input type="radio" name="answer6" value="$questionArray[6]['answer'][1]['valid']">
                     <span class="sentence">
                         <?php echo $questionArray[6]['answers'][1]['answer']; ?>
                     </span>

@@ -5,7 +5,6 @@ $stmt = $conn->prepare("SELECT social_status, employed, job from user WHERE id=:
 $stmt->bindParam(':user_id',  $_SESSION['user_id']);
 $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-// echo '<pre>'; print_r( $_SESSION['questionAnswer']); echo '</pre>';
 $social = $row['social_status'];
 $employed = $row['employed'];
 $job = $row['job'];

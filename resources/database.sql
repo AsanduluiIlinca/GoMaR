@@ -16,6 +16,7 @@ CREATE TABLE user (
      town VARCHAR(70) NOT NULL,
      ethnicity VARCHAR(70) NOT NULL,
      languages VARCHAR(255),
+     score INT,
      PRIMARY KEY (id) 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 

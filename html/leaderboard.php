@@ -55,6 +55,7 @@ function tabel($result)
                 LeaderBoard
             </div>
             <?php echo tabel($result); ?>
+            <span class="btn-home" onclick="window.location.href = 'rss.php';">View RSS flux</span>
         </div>
     </div>
 </body>

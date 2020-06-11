@@ -10,6 +10,8 @@
     $results = $stmt -> fetch(PDO::FETCH_ASSOC);
 
     // echo '<pre>'; print_r( $results); echo '</pre>';
+    unset($_SESSION['categoryID']);
+    unset($_SESSION['categoryName']);
     $_SESSION['categoryID']= $results['id'];
     $_SESSION['categoryName']= $results['name'];
     // echo '<pre>'; print_r( $_SESSION); echo '</pre>';

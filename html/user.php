@@ -14,7 +14,7 @@ function married($social)
     if ($social == 'Married') {
         return <<<HTML
         <html>
-        <body><div> <span class="btn-home" onclick="window.location.href = 'family.php';">Read about family</span></div>
+        <body><div> <span class="btn-home" onclick="window.location.href = 'setCategory.php?categoryName=family';">Read about family</span></div>
         </body>
         </html>
     HTML;
@@ -25,7 +25,7 @@ function employed($employed)
     if ($employed == 'Yes') {
         return <<<HTML
             <html>
-            <body><div> <span class="btn-home" onclick="window.location.href = 'work.php';">Read about work</span></div>
+            <body><div> <span class="btn-home" onclick="window.location.href = 'setCategory.php?categoryName=work';">Read about work</span></div>
             </body>
             </html>
         HTML;
@@ -36,7 +36,7 @@ function job($job)
     if ($job == 'Professor' || $job == 'professor' || $job == 'profesor' || $job == 'profesoara' || $job == 'Profesor' || $job == 'Profesoara') {
         return <<<HTML
             <html>
-            <body><div> <span class="btn-home" onclick="window.location.href = 'academic.php';">Read about academic environment</span></div>
+            <body><div> <span class="btn-home" onclick="window.location.href = 'setCategory.php?categoryName=academic';">Read about academic environment</span></div>
             </body>
             </html>
         HTML;
@@ -60,7 +60,7 @@ function job($job)
         <div class="container">
             <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landing.html';">
             <div class="right-section">
-                <div class="btn" onclick="window.location.href = 'statistics.html';">
+                <div class="btn" onclick="window.location.href = 'statistics.php';">
                     <img alt="GoMar Statistics" src="../resources/statistics-icon.svg" class="icon">
                     <div class="btn-label">| Statistics</div>
                 </div>
@@ -77,7 +77,7 @@ function job($job)
                 Recommendations based on your profile
             </div>
             <div>
-                <span class="btn-home" onclick="window.location.href = 'society.php';">Read about society</span>
+                <span class="btn-home" onclick="window.location.href = 'setCategory.php?categoryName=society';">Read about society</span>
                 <?php echo married($social);
                 echo employed($employed);
                 echo job($job) ?>

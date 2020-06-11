@@ -1,7 +1,7 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    // echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+    echo '<pre>'; print_r( $_SESSION['categoryID']); echo '</pre>';
 
     $records = $conn->prepare('SELECT score FROM user WHERE user_id =:user_id');
     $records->bindParam(':user_id', $_SESSION['user_id']);
@@ -33,7 +33,7 @@
     $sql = "UPDATE user SET score=:score WHERE id=:user_id";
     $stmt = $conn->prepare($sql);
     $stmt->execute(array(':score'=>$total_score, ':user_id'=>$user_id));
-    echo $stmt->rowCount() . " records UPDATED successfully <br>";
+    // echo $stmt->rowCount() . " records UPDATED successfully <br>";
     
  
     if (isset($_POST["submit_1"]))
@@ -60,7 +60,7 @@
 <body>
     <div class="navbar">
         <div class="container">
-            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landing.html';">
+            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landing.php';">
             <div class="right-section">
                 <div class="btn" onclick="window.location.href = 'statistics.php';">
                     <img alt="GoMar Statistics" src="../resources/statistics-icon.svg" class="icon">

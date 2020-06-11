@@ -70,7 +70,7 @@
     </div>
     <div class="container">
         <form class="central-container scrollable" name="form" action="statistics.php" method="POST">
-            <?php echo "Score for last  test was: ".$_SESSION['lastTest']." from a total of ".$_SESSION['totalScore'];?>
+            <?php echo "Score for last  test was: ".$_SESSION['lastTest']." from a total of ".$_SESSION['totalScore'];?></br>
             <input class="b" type="submit" name="submit_1" onclick="window.location.href = 'leaderboard.php';" value='Scoreboard'>
             <input class="b" type="submit" name="submit_2" onclick="window.location.href = 'myprogress.php';" value='My progress'>
     </form>

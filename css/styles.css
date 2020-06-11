@@ -354,6 +354,28 @@ body {
 .central-container .test-div {
   margin-left: 20px;
 }
+.central-container .i {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin: 0.8rem 0;
+  display: inline-block;
+  border: 0.1rem solid;
+  box-sizing: border-box;
+  text-align: center;
+}
+.central-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+.central-container td {
+  border: 1px solid black;
+}
+.central-container th {
+  border: 1px solid black;
+  height: 50px;
+  text-align: left;
+}
 .scrollable {
   overflow-y: scroll;
   scrollbar-width: none;

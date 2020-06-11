@@ -1,7 +1,7 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+    //echo '<pre>'; print_r( $_SESSION); echo '</pre>';
 ?>
 <!doctype html>
 
@@ -19,7 +19,7 @@
         <div class="container">
             <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landing.html';">
             <div class="right-section">
-                <div class="btn" onclick="window.location.href = 'statistics.html';">
+                <div class="btn" onclick="window.location.href = 'statistics.php';">
                     <img alt="GoMar Statistics" src="../resources/statistics-icon.svg" class="icon">
                     <div class="btn-label">| Statistics</div>
                 </div>
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="central-container scrollable">
             <span class="b" onclick="window.location.href = 'statistics.php';">Scoreboard</span>
-            <span class="b" onclick="window.location.href = 'statistics.php';">My progress</span>
+            <span class="b" onclick="window.location.href = 'leaderboard.php';">Leaderboards</span>
         </div>
     </div>
 </body>

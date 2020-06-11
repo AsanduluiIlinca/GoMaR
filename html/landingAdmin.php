@@ -47,10 +47,10 @@ session_start();
                     You can access from here some things :
                 </p>
                 <div>
-                    <span class="btn-home" onclick="window.location.href = 'category.html';">Category</span>
-                    <span class="btn-home" onclick="window.location.href = 'user.html';">User Profile</span>
-                    <span class="btn-home" onclick="window.location.href = 'statistics.html';">Statistics</span>
-                    <span class="btn-home" onclick="window.location.href = 'admin.html';">Admin</span>
+                    <span class="btn-home" onclick="window.location.href = 'category.php';">Category</span>
+                    <span class="btn-home" onclick="window.location.href = 'user.php';">User Profile</span>
+                    <span class="btn-home" onclick="window.location.href = 'statistics.php';">Statistics</span>
+                    <span class="btn-home" onclick="window.location.href = 'admin.php';">Admin</span>
                 </div>
             </div>
         </div>

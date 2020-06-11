@@ -86,7 +86,7 @@
             if($stmt_exec)
             {
                 echo '<script>("Data updated")</script>';
-                header("Location: landing.html");
+                header("Location: landing.php");
             }
             else 
             {

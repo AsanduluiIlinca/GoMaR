@@ -15,11 +15,11 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) :
    if (count($results) > 0 && password_verify($_POST['password'], $results['password']) && $results['admin'] == '1') {
 
       $_SESSION['user_id'] = $results['id'];
-      header("Location: landingAdmin.html");
+      header("Location: landingAdmin.php");
    } else if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
 
       $_SESSION['user_id'] = $results['id'];
-      header("Location: landing.html");
+      header("Location: landing.php");
    } else {
       $message = 'Sorry, those credentials do not match!';
    }

@@ -1,7 +1,52 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+    // echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+
+    $records = $conn->prepare('SELECT score FROM user WHERE user_id =:user_id');
+    $records->bindParam(':user_id', $_SESSION['user_id']);
+    $records_exec=$records->execute();
+    $results = $records->fetchAll();
+    // echo sizeof($results);
+
+    $records2 = $conn->prepare('SELECT score FROM category_score WHERE user_id =:user_id');
+    $records2->bindParam(':user_id', $_SESSION['user_id']);
+    $records2_exec=$records2->execute();
+    $results2 = $records2->fetchAll();
+    // echo sizeof($results2);
+
+    if( sizeof($results))
+    {
+       $total_score=0;
+    }
+    else 
+    {
+        $total_score = $results['score'];
+    }
+   
+    for($i=0;$i<=sizeof($results2);$i++)
+    { 
+        $total_score = $total_score + $results2[$i][0];
+    } 
+   
+    echo $total_score;
+    $user_id = $_SESSION['user_id'];
+    $sql = "UPDATE user SET score=:score WHERE user_id=:user_id";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(array(':score'=>$total_score, ':user_id'=>$user_id));
+    echo $stmt->rowCount() . " records UPDATED successfully ";
+    
+    
+
+    
+        
+
+
+    // if (isset($_POST["submit_1"]))
+    // {
+
+    // }
 ?>
 <!doctype html>
 
@@ -31,10 +76,11 @@
         </div>
     </div>
     <div class="container">
-        <div class="central-container scrollable">
-            <span class="b" onclick="window.location.href = 'statistics.php';">Scoreboard</span>
-            <span class="b" onclick="window.location.href = 'statistics.php';">My progress</span>
-        </div>
+        <form class="central-container scrollable" name="form" action="statistics.php" method="POST">
+            <?php echo "Score for last  test was: ".$_SESSION['lastTest']." from a total of ".$_SESSION['totalScore'];?>
+            <input class="b" type="submit" name="submit_1" onclick="window.location.href = 'statistics.php';" value='Scoreboard'>
+            <input class="b" type="submit" name="submit_2" onclick="window.location.href = 'statistics.php';" value='My progress'>
+    </form>
     </div>
 </body>
 

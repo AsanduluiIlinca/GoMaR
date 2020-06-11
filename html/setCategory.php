@@ -1,7 +1,7 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    echo '<pre>'; print_r($_GET['categoryName']); echo '</pre>';
+    // echo '<pre>'; print_r($_GET['categoryName']); echo '</pre>';
     // echo '<pre>'; print_r( $_SESSION); echo '</pre>';
 
     $stmt = $conn -> prepare("SELECT * FROM category WHERE name=:name");

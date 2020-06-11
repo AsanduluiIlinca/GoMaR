@@ -16,6 +16,16 @@
             }
         return $score;
     }
+
+    function computeTotalScore()
+    {
+        $score = 0;
+        for($i=0;$i<=6;$i++)
+            {
+                $score = $score + $_SESSION['questionAnswer'][$i]['score'];
+            }
+        return $score;
+    }
     $user_id = $_SESSION['user_id'];
     $category_id = $_SESSION['categoryID'];
     echo 'category' . $category_id;
@@ -53,7 +63,10 @@
             echo $stmt->rowCount() . " records UPDATED successfully personalData";
             // echo $score;
     }
-    // $_SESSION['questionAnswer'] = 0;
-    // $_SESSION['selectedAnswers'] = 0;
-    //header("Location: statistics.php");
+    unset($_SESSION['totalScore']);
+    unset($_SESSION['lastTest']);
+    $_SESSION['totalScore'] = computeTotalScore();
+    $zero = 0;
+    $_SESSION['lastTest'] = computeCategoryScore($zero);
+    header("Location: statistics.php");
 ?>

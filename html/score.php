@@ -18,12 +18,15 @@
     }
     $user_id = $_SESSION['user_id'];
     $category_id = $_SESSION['categoryID'];
+    echo 'category' . $category_id;
 
-    $records = $conn->prepare('SELECT * FROM category_score WHERE user_id =:user_id');
+    $records = $conn->prepare('SELECT * FROM category_score WHERE user_id =:user_id AND category_id = :category_id');
     $records->bindParam(':user_id', $_SESSION['user_id']);
+    $records->bindParam(':category_id', $category_id);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
-    // echo $results['score'];
+    echo 'results' ;
+    echo print_r($results);
 
     if($results == false)
     {   $score=0;
@@ -35,6 +38,7 @@
         $stmt->bindParam(':category_id', $_SESSION['categoryID']);
         $stmt->bindParam(':score', $score);
         $stmt->execute();
+        echo $_SESSION['categoryID'];
 
     }
     else {
@@ -45,12 +49,11 @@
             $sql = "UPDATE category_score SET score=:score WHERE user_id=:user_id AND category_id=:category_id";
 
             $stmt = $conn->prepare($sql);
-            $stmt->execute(array(":score"=>$score, ":user_id"=>$user_id, ":category_id"=>$category_id));
+            $stmt->execute(array(':score'=>$score, ':user_id'=>$user_id, ':category_id'=>$category_id));
             echo $stmt->rowCount() . " records UPDATED successfully personalData";
             // echo $score;
     }
     // $_SESSION['questionAnswer'] = 0;
     // $_SESSION['selectedAnswers'] = 0;
-    header("Location: statistics.php");
-    
+    //header("Location: statistics.php");
 ?>

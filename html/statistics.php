@@ -28,23 +28,23 @@
     { 
         $total_score = $total_score + $results2[$i][0];
     } 
-    $total_score = 15;
+    // $total_score = 15;
     $user_id = $_SESSION['user_id'];
     $sql = "UPDATE user SET score=:score WHERE id=:user_id";
     $stmt = $conn->prepare($sql);
     $stmt->execute(array(':score'=>$total_score, ':user_id'=>$user_id));
     echo $stmt->rowCount() . " records UPDATED successfully <br>";
     
-    
+ 
+    if (isset($_POST["submit_1"]))
+    {
+        header("Location: leaderboard.php");
+    }
 
-    
-        
-
-
-    // if (isset($_POST["submit_1"]))
-    // {
-
-    // }
+    if (isset($_POST["submit_2"]))
+    {
+        header("Location: myprogress.php");
+    }
 ?>
 <!doctype html>
 
@@ -76,8 +76,8 @@
     <div class="container">
         <form class="central-container scrollable" name="form" action="statistics.php" method="POST">
             <?php echo "Score for last  test was: ".$_SESSION['lastTest']." from a total of ".$_SESSION['totalScore'];?>
-            <input class="b" type="submit" name="submit_1" onclick="window.location.href = 'statistics.php';" value='Scoreboard'>
-            <input class="b" type="submit" name="submit_2" onclick="window.location.href = 'statistics.php';" value='My progress'>
+            <input class="b" type="submit" name="submit_1" onclick="window.location.href = 'leaderboard.php';" value='Scoreboard'>
+            <input class="b" type="submit" name="submit_2" onclick="window.location.href = 'myprogress.php';" value='My progress'>
     </form>
     </div>
 </body>

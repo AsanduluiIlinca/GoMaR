@@ -12,7 +12,7 @@
     echo '<pre>'; print_r( $results); echo '</pre>';
     $_SESSION['categoryID']= $results['id'];
     $_SESSION['categoryName']= $results['name'];
-    echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+    //echo '<pre>'; print_r( $_SESSION); echo '</pre>';
 
     if(isset($_SESSION['categoryID']) && $_SESSION['categoryName'] == "academic")
     {

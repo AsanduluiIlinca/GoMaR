@@ -15,7 +15,7 @@
     $results2 = $records2->fetchAll();
     // echo sizeof($results2);
 
-    if( sizeof($results))
+    if( $results == false)
     {
        $total_score=0;
     }
@@ -24,18 +24,18 @@
         $total_score = $results['score'];
     }
    
-    for($i=0;$i<=sizeof($results2);$i++)
+    for($i=0;$i<sizeof($results2);$i++)
     { 
         $total_score = $total_score + $results2[$i][0];
     } 
-   
-    echo $total_score;
+    $total_score = 15;
+    echo $total_score . '<br>';
     $user_id = $_SESSION['user_id'];
-    $sql = "UPDATE user SET score=:score WHERE user_id=:user_id";
-
+    $sql = "UPDATE user SET score=:score WHERE id=:user_id";
+    echo $user_id . '<br>';
     $stmt = $conn->prepare($sql);
     $stmt->execute(array(':score'=>$total_score, ':user_id'=>$user_id));
-    echo $stmt->rowCount() . " records UPDATED successfully ";
+    echo $stmt->rowCount() . " records UPDATED successfully <br>";
     
     
 

@@ -1,7 +1,8 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-// echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+    // echo '<pre>'; print_r( $_SESSION['categoryID']); echo '</pre>';
+//     echo '<pre>'; print_r( $_SESSION['categoryName']); echo '</pre>';
 
     $stmt = $conn->prepare("SELECT * FROM question WHERE category_id=:categoryID");
     $stmt -> bindParam(':categoryID', $_SESSION['categoryID']);

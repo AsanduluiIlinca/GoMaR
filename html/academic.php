@@ -24,7 +24,7 @@
                     <img alt="GoMar Statistics" src="../resources/statistics-icon.svg" class="icon">
                     <div class="btn-label">| Statistics</div>
                 </div>
-                <div class="btn" onclick="window.location.href = 'home.html';">
+                <div class="btn" onclick="window.location.href = 'logout.php';">
                     <img alt="GoMar Logout" src="../resources/logout-icon.svg" class="icon">
                     <div class="btn-label">| Log out</div>
                 </div>

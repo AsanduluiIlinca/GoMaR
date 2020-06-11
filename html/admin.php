@@ -23,9 +23,9 @@ if($result['admin'] == 0){
 <body>
     <div class="navbar">
         <div class="container">
-            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo">
+            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landing.php';">
             <div class="right-section">
-                <div class="btn" onclick="window.location.href = 'home.html';">
+                <div class="btn" onclick="window.location.href = 'logout.php';">
                     <img alt="GoMar Logout" src="../resources/logout-icon.svg" class="icon">
                     <div class="btn-label">| Log out</div>
                 </div>

@@ -18,7 +18,7 @@ session_start();
         <div class="container">
             <img alt="GoMar Logo" src="../resources/logo.svg" class="logo">
             <div class="right-section">
-                <div class="btn" onclick="window.location.href = 'statistics.html';">
+                <div class="btn" onclick="window.location.href = 'statistics.php';">
                     <img alt="GoMar Statistics" src="../resources/statistics-icon.svg" class="icon">
                     <div class="btn-label">| Statistics</div>
                 </div>

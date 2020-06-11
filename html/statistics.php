@@ -1,7 +1,6 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    echo '<pre>'; print_r( $_SESSION['categoryID']); echo '</pre>';
 
     $records = $conn->prepare('SELECT score FROM user WHERE user_id =:user_id');
     $records->bindParam(':user_id', $_SESSION['user_id']);

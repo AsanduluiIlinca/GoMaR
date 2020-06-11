@@ -1,10 +1,7 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    // echo '<pre>'; print_r( $_SESSION); echo '</pre>';
-    // echo '<pre>'; print_r( $_SESSION['selectedAnswers']); echo '</pre>';
 
-    // echo $score_category;
     function computeCategoryScore($score)
     {
         for($i=0;$i<=6;$i++)
@@ -52,7 +49,6 @@
 
     }
     else {
-            // $score = $results['score'];
             
             $score = computeCategoryScore( $results['score']);
 
@@ -61,7 +57,6 @@
             $stmt = $conn->prepare($sql);
             $stmt->execute(array(':score'=>$score, ':user_id'=>$user_id, ':category_id'=>$category_id));
             echo $stmt->rowCount() . " records UPDATED successfully personalData";
-            // echo $score;
     }
     unset($_SESSION['totalScore']);
     unset($_SESSION['lastTest']);

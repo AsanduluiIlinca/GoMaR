@@ -1,8 +1,6 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    // echo '<pre>'; print_r( $_SESSION['categoryID']); echo '</pre>';
-//     echo '<pre>'; print_r( $_SESSION['categoryName']); echo '</pre>';
 
     $stmt = $conn->prepare("SELECT * FROM question WHERE category_id=:categoryID");
     $stmt -> bindParam(':categoryID', $_SESSION['categoryID']);
@@ -55,7 +53,6 @@
     $randIndex = array_rand($higherDiff,2);
     $questionIDS=addToArray($questionIDS,$randIndex , $higherDiff);
 
-    // $questionArray = array();
     foreach ($results as $i) 
     {
         foreach ($questionIDS as $j)
@@ -66,7 +63,6 @@
                 $stmt -> bindParam(':question_id', $j);
                 $stmt -> execute();
                 $answersArray = $stmt -> fetchAll();
-                //  echo '<pre>'; print_r( $answersArray); echo '</pre>';
                 $questionArray[] = array('id'=>$j,'question'=>$i['question'],'score'=>$i['difficulty'], 'answers'=>array('0'=>array('id'=>$answersArray[0]['id'],'answer'=>$answersArray[0]['answer'],'valid'=>$answersArray[0]['valid']),
                                                                                                                          '1'=>array('id'=>$answersArray[1]['id'],'answer'=>$answersArray[1]['answer'],'valid'=>$answersArray[1]['valid'])));
             }
@@ -74,14 +70,11 @@
     }
 
     $_SESSION['questionAnswer']= $questionArray;
-    // echo '<pre>'; print_r( $questionArray); echo '</pre>';
     if(isset($_POST['submit']))
     {   
-        // echo '<pre>'; print_r( $_POST['answer0']); echo '</pre>';
         if(isset($_POST['answer0']) && isset($_POST['answer1']) && isset($_POST['answer2']) && isset($_POST['answer3']) && isset($_POST['answer4']) && isset($_POST['answer5']) && isset($_POST['answer6']))
         {
             $_SESSION['selectedAnswers'] = array($_POST['answer0'],$_POST['answer1'],$_POST['answer2'],$_POST['answer3'],$_POST['answer4'],$_POST['answer5'],$_POST['answer6']);
-            // $_SESSION['test'] = $_POST['answer0'];
             header("Location: score.php");
         }
        

@@ -9,9 +9,4 @@
         } catch(PDOException $e){
         die( "Connection failed: " . $e->getMessage());}
 
-    /*$dbhost = "localhost";
-    $dbuser = "root";
-    $dbpass = "";
-    $db = "gomar";
-    $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error); */
 ?>

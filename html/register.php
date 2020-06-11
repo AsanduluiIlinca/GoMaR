@@ -3,21 +3,6 @@
   include 'databaseConnection.php';
   error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
-//   $message = '';
-
-  // if(!empty($_POST['username']) && !empty($_POST['password'])):
-    
-    // Enter the new user in the database
-    // $sql = "INSERT INTO user (username, email, password) VALUES (:username, :email, :password)";
-    // $stmt = $conn->prepare($sql);
-    // $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    // $passwordConf = password_hash($_POST['passwordConf'], PASSWORD_BCRYPT);
-    // $stmt->bindParam(':username', $_POST['username']);
-    // $stmt->bindParam(':email', $_POST['email']);
-    // $stmt->bindParam(':password', $password);
-    // $stmt->execute();
-
-    // $_SESSION['username']= $_POST['username'];
     $message = '';
     if(empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['passwordConf']))
     {
@@ -34,7 +19,6 @@
       $dataBD = $conn->prepare("SELECT username from user WHERE username=:username");
       $dataBD -> bindParam(':username',  $_POST['username']);
       $dataBD -> execute();
-      // echo '<pre>'; print_r( $_POST['username']); echo '</pre>';
 
       if ($dataBD->rowCount() > 0)
       {
@@ -59,15 +43,6 @@
         }
       }
     }
-    // else
-    // {
-    //   $message = "error occured!";
-    // }
-
-    
-   
-
-  // endif;
   
 ?>
     

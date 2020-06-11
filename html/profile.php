@@ -10,8 +10,6 @@
     $results = $records->fetch(PDO::FETCH_ASSOC);
     $_SESSION['user_id'] = $results['id'];
 
-    // echo '<pre>'; print_r($username); echo '</pre>';
-    // echo '<pre>'; print_r($_SESSION); echo '</pre>';
     if(isset($_POST['submit_1']))
     {
         try
@@ -25,7 +23,7 @@
 
             $stmt = $conn->prepare($sql);
             $stmt_exec= $stmt->execute(array(":firstname"=>$firstname, ":lastname"=>$lastname, ":birthday"=>$birthday, "gender"=>$gender, ":username"=>$username));
-            echo $stmt->rowCount() . " records UPDATED successfully personalData";
+            //echo $stmt->rowCount() . " records UPDATED successfully personalData";
             if($stmt_exec)
             {
                 echo '<script>("Data updated")</script>';

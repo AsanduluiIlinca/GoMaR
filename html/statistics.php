@@ -7,13 +7,11 @@
     $records->bindParam(':user_id', $_SESSION['user_id']);
     $records_exec=$records->execute();
     $results = $records->fetchAll();
-    // echo sizeof($results);
 
     $records2 = $conn->prepare('SELECT score FROM category_score WHERE user_id =:user_id');
     $records2->bindParam(':user_id', $_SESSION['user_id']);
     $records2_exec=$records2->execute();
     $results2 = $records2->fetchAll();
-    // echo sizeof($results2);
 
     if( $results == false)
     {
@@ -28,12 +26,10 @@
     { 
         $total_score = $total_score + $results2[$i][0];
     } 
-    // $total_score = 15;
     $user_id = $_SESSION['user_id'];
     $sql = "UPDATE user SET score=:score WHERE id=:user_id";
     $stmt = $conn->prepare($sql);
     $stmt->execute(array(':score'=>$total_score, ':user_id'=>$user_id));
-    // echo $stmt->rowCount() . " records UPDATED successfully <br>";
     
  
     if (isset($_POST["submit_1"]))

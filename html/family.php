@@ -1,7 +1,6 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    echo '<pre>'; print_r( $_SESSION['categoryID']); echo '</pre>';
 ?>
 <!doctype html>
 

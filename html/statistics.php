@@ -29,10 +29,8 @@
         $total_score = $total_score + $results2[$i][0];
     } 
     $total_score = 15;
-    echo $total_score . '<br>';
     $user_id = $_SESSION['user_id'];
     $sql = "UPDATE user SET score=:score WHERE id=:user_id";
-    echo $user_id . '<br>';
     $stmt = $conn->prepare($sql);
     $stmt->execute(array(':score'=>$total_score, ':user_id'=>$user_id));
     echo $stmt->rowCount() . " records UPDATED successfully <br>";

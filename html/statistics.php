@@ -64,10 +64,14 @@ if (isset($_POST["submit_2"])) {
     </div>
     <div class="container">
         <form class="central-container scrollable" name="form" action="statistics.php" method="POST">
+            <div class="title">
+                Statistics and score
+            </div>
             <?php echo "Score for last  test was: " . $_SESSION['lastTest'] . " from a total of " . $_SESSION['totalScore']; ?></br>
-            <input class="b" type="submit" name="submit_1" onclick="window.location.href = 'leaderboard.php';" value='Leaderboard'>
-            <input class="b" type="submit" name="submit_2" onclick="window.location.href = 'myprogress.php';" value='Score by category'>
+            <span class="b" type="submit" name="submit_1" onclick="window.location.href = 'leaderboard.php';"> Leaderboard</span>
+            <span class="b" type="submit" name="submit_2" onclick="window.location.href = 'myprogress.php';"> Score by category</span>
         </form>
     </div>
 </body>
+
 </html>

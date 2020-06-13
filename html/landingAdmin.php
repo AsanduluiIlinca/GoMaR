@@ -1,5 +1,5 @@
 <?php 
-
+include 'databaseConnection.php';
 session_start();
 $records = $conn->prepare('SELECT admin FROM user WHERE id = :user_id');
 $records->bindParam(':user_id', $_SESSION['user_id']);

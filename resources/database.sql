@@ -53,3 +53,12 @@ CREATE TABLE answer (
      PRIMARY KEY (id),
      FOREIGN KEY (question_id) REFERENCES question(id)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+ CREATE TABLE informations (
+     id INT NOT NULL AUTO_INCREMENT,
+     category_id INT NOT NULL,
+     link_site VARCHAR(255),
+     path_image VARCHAR(255),
+     PRIMARY KEY (id),
+     FOREIGN KEY (category_id) REFERENCES category(id)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;

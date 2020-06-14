@@ -66,10 +66,17 @@ if (isset($_POST["submit_2"])) {
         <form class="central-container scrollable" name="form" action="statistics.php" method="POST">
             <div class="title">
                 Statistics and score
+
+                <?php if(isset($_SESSION['lastTest']) && isset($_SESSION['totalScore']))
+                {
+                    echo '<p>';echo "Score for last  test was: " . $_SESSION['lastTest'] . " from a total of " . $_SESSION['totalScore']; echo '</p>';
+                }
+                ?>
+                <br>
+            
+                <input type="submit" class="b" name="submit_1" onclick="window.location.href = 'leaderboard.php';" value="Leaderboard">
+                <input type="submit" class="b" name="submit_2" onclick="window.location.href = 'myprogress.php';" value="Score by category">
             </div>
-            <?php echo "Score for last  test was: " . $_SESSION['lastTest'] . " from a total of " . $_SESSION['totalScore']; ?></br>
-            <span class="b" type="submit" name="submit_1" onclick="window.location.href = 'leaderboard.php';"> Leaderboard</span>
-            <span class="b" type="submit" name="submit_2" onclick="window.location.href = 'myprogress.php';"> Score by category</span>
         </form>
     </div>
 </body>

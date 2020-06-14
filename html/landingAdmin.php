@@ -5,9 +5,6 @@ $records = $conn->prepare('SELECT admin FROM user WHERE id = :user_id');
 $records->bindParam(':user_id', $_SESSION['user_id']);
 $records->execute();
 $results = $records->fetch(PDO::FETCH_ASSOC);
-if($result['admin'] == 0){
-    header("Location: login.php");
-}
 ?>
 <!doctype html>
 

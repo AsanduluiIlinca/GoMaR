@@ -1,12 +1,11 @@
 <?php
+include 'databaseConnection.php';
 session_start();
 $records = $conn->prepare('SELECT admin FROM user WHERE id = :user_id');
 $records->bindParam(':user_id', $_SESSION['user_id']);
 $records->execute();
 $results = $records->fetch(PDO::FETCH_ASSOC);
-if($result['admin'] == 0){
-    header("Location: login.php");
-}
+
 ?>
 
 <!doctype html>
@@ -23,7 +22,7 @@ if($result['admin'] == 0){
 <body>
     <div class="navbar">
         <div class="container">
-            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landing.php';">
+            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landingAdmin.php';">
             <div class="right-section">
                 <div class="btn" onclick="window.location.href = 'logout.php';">
                     <img alt="GoMar Logout" src="../resources/logout-icon.svg" class="icon">
@@ -48,7 +47,7 @@ if($result['admin'] == 0){
                     <option value="5">work</option>
                 </select>
             </form>
-            <span class="admin-button " onclick="window.location.href = '';">Set the score of a question</span>
+            <span class="admin-button " onclick="window.location.href = 'deleteUser.php';">Delete a user</span>
         </div>
     </div>
 </body>

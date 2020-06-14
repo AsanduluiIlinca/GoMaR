@@ -117,9 +117,9 @@
     </div>
     <div class="central-container scrollable">
         
-        <div id="slider-1" class="slide">
+    <div id="slider-1" class="slide">
             <div class="boxcontent">
-                <form name="form1" action="" method="POST">
+                <form name="form1" method="POST">
 
                         <label><b>First Name</b></label>
                         <input type="text" placeholder="Enter first name" name="firstname"  required>
@@ -131,7 +131,7 @@
                         <input type="date" name="birthday" >
                             
                         <label><b>Gender</b></label>
-                        <select type="text" name="gender" >
+                        <select name="gender" >
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
@@ -146,9 +146,9 @@
         <div id="slider-2" class="slide">
             <div class="boxcontent">
             
-                <form name="form2" action="" method="POST">
+                <form name="form2" method="POST">
                         <label><b>Social status</b></label>
-                        <select name="social_status" required>
+                        <select name="social_status">
                             <option value="Married">Married</option>
                             <option value="Unmarried">Unmarried</option>
                         </select>
@@ -165,8 +165,8 @@
                         <label><b>Job</b></label>
                         <input type="text" placeholder="Enter job" name="job" required> 
                     
-                        <input class="button" id="prev" type="submit" name="submit_1" onclick="window.location.href ='#slider-1';" value="Back">
-                        <input class="button" id="next" type="submit" name="submit_2" onclick="window.location.href ='#slider-3';" value="Next">	
+                        <input class="button" id="prev2" type="submit" name="submit_1" onclick="window.location.href ='#slider-1';" value="Back">
+                        <input class="button" id="next2" type="submit" name="submit_2" onclick="window.location.href ='#slider-3';" value="Next">	
                 </form>		
                 
             </div>
@@ -174,7 +174,7 @@
             
         <div id="slider-3" class="slide">
             <div class="boxcontent">
-                <form name="form3" action="" method="POST">
+                <form name="form3" method="POST">
                         <label><b>Country</b></label>
                         <input type="text" placeholder="Country name" name="country" required>
                         
@@ -182,13 +182,13 @@
                         <input type="text" placeholder="Town" name="town" required> 
 
                         <label><b>Ethnicity</b></label>
-                        <input type="test" placeholder="Ethnicity" name="ethnicity" required> 
+                        <input type="text" placeholder="Ethnicity" name="ethnicity" required> 
                             
                         <label><b>Languages</b></label>
-                        <input type="test" placeholder="Language" name="languages" required> 
+                        <input type="text" placeholder="Language" name="languages" required> 
 
-                        <input class="button" id="prev" type="submit" name="submit_2" onclick="window.location.href ='#slider-2';" value="Back">
-                        <input class="button" id="next" type="submit" name="submit_3"onclick="window.location.href ='landing.html';" value="Next">		
+                        <input class="button" id="prev3" type="submit" name="submit_2" onclick="window.location.href ='#slider-2';" value="Back">
+                        <input class="button" id="next3" type="submit" name="submit_3" onclick="window.location.href ='landing.html';" value="Next">		
             
                 </form>	
                 </div>

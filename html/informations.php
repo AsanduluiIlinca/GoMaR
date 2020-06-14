@@ -1,6 +1,15 @@
 <?php
     session_start();
     include 'databaseConnection.php';
+    // echo '<pre>'; print_r( $_SESSION); echo '</pre>';
+
+    $stmt = $conn->prepare("SELECT * from informations WHERE category_id=:category_id");
+    $stmt->bindParam(':category_id',  $_SESSION['categoryID']);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // echo '<pre>'; print_r( $result); echo '</pre>';
+
 ?>
 <!doctype html>
 
@@ -19,11 +28,11 @@
         <div class="container">
             <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landing.php';">
             <div class="right-section">
-                <div class="btn" onclick="window.location.href = 'statistics.php';">
+                <div class="btn" onclick="window.location.href = 'statistics.html';">
                     <img alt="GoMar Statistics" src="../resources/statistics-icon.svg" class="icon">
                     <div class="btn-label">| Statistics</div>
                 </div>
-                <div class="btn" onclick="window.location.href = 'home.html';">
+                <div class="btn" onclick="window.location.href = 'logout.php';">
                     <img alt="GoMar Logout" src="../resources/logout-icon.svg" class="icon">
                     <div class="btn-label">| Log out</div>
                 </div>
@@ -33,7 +42,7 @@
     <div class="container">
         <div class="central-container scrollable">
             <div class="title">
-                Family
+            <?php echo $_SESSION['categoryName'].' references';?>
             </div>
             <div class="description">
                 <ul>
@@ -44,35 +53,19 @@
                         </div>
                     </li>
                     <li>
-                        <div class="title-of-article">Meaning of Family</div>
                         <p class="links">(Click on the image if you want to visit our resources.) </p>
-                        <a
-                            href="https://family.lovetoknow.com/about-family-values/meaning-family">
-                            <img class="image" src="../resources/meaningOfFamily.png">
-                        </a>
-
                     </li>
+                    <?php
+                        foreach ($result as $value){
+                    ?>
                     <li>
-                        <div class="title-of-article">Family</div>
                         <a
-                            href="https://en.wikipedia.org/wiki/Family">
-                            <img class="image" src="../resources/family-wiki.png.">
+                            href=<?= $value['link_site'];?>>
+                            <img alt="img" class="image" src=<?= $value['path_image'];?>>
                         </a>
-
+                    <?php }?>
                     </li>
-                    <li>
-                        <div class="title-of-article">What does family mean for you, and how has it shaped you?</div>
-                        <a href="https://medium.com/sandbox/what-does-family-mean-for-you-and-how-has-it-shaped-you-8cbc1aaaee02">
-                            <img class="image" src="../resources/shaped.png">
-                        </a>
-                    </li>
-                    <li>
-                        <div class="title-of-article">What does family mean to you?</div>
-                        <a
-                            href="https://www.travelance.ca/blog/family-mean/">
-                            <img class="image" src="../resources/what-family-meaning.png">
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>

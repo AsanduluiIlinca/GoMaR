@@ -44,10 +44,14 @@ function users($results)
 </head>
 
 <body>
-    <div class="navbar">
+<div class="navbar">
         <div class="container">
-            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landingAdmin.php';">
+            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" href="landingAdmin.php">
             <div class="right-section">
+                <div class="btn" onclick="window.location.href = 'statistics.php';">
+                    <img alt="GoMar Statistics" src="../resources/statistics-icon.svg" class="icon">
+                    <div class="btn-label">| Statistics</div>
+                </div>
                 <div class="btn" onclick="window.location.href = 'logout.php';">
                     <img alt="GoMar Logout" src="../resources/logout-icon.svg" class="icon">
                     <div class="btn-label">| Log out</div>

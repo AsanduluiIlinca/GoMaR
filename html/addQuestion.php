@@ -38,12 +38,22 @@ $results = $records->fetch(PDO::FETCH_ASSOC);
     <div class="container">
         <div class="central-container scrollable">
             <div class="title">
-                Admin attributes
+                Add a question
             </div>
-            <span class="admin-button" onclick="window.location.href = 'addQuestion.php';">Add new questions</span>
-            <span class="admin-button " onclick="window.location.href = 'deleteUser.php';">Delete a user</span>
-            <span class="admin-button " onclick="window.location.href = 'addInformation.php';">Add information</span>
-            <span class="admin-button " onclick="window.location.href = 'deleteQuestion.php';">Delete a question</span>
+            <form name="form" action="" method="POST">
+                <input class="i" type="text" placeholder="Enter the question">
+                <input class="i" type="text" placeholder="Enter the right answer">
+                <input class="i" type="text" placeholder="Enter the wrong answer">
+                <p>Select the category:</p>
+                <select class="i" type="text" name="category">
+                    <option value="1">academic</option>
+                    <option value="2">family</option>
+                    <option value="3">group</option>
+                    <option value="4">society</option>
+                    <option value="5">work</option>
+                </select>
+            </form>
+            <span class="admin-button " onclick="window.location.href = '';">Add question</span>
         </div>
     </div>
 </body>

@@ -12,25 +12,9 @@
     $_SESSION['categoryID']= $results['id'];
     $_SESSION['categoryName']= $results['name'];
 
-    if(isset($_SESSION['categoryID']) && $_SESSION['categoryName'] == "academic")
+    if(isset($_SESSION['categoryID']))
     {
-        header("Location: academic.php");
-    }
-    if(isset($_SESSION['categoryID']) && $_SESSION['categoryName'] == "family")
-    {
-        header("Location: family.php");
-    }
-    if(isset($_SESSION['categoryID']) && $_SESSION['categoryName'] == "group")
-    {
-        header("Location: group.php");
-    }
-    if(isset($_SESSION['categoryID']) && $_SESSION['categoryName'] == "work")
-    {
-        header("Location: work.php");
-    }
-    if(isset($_SESSION['categoryID']) && $_SESSION['categoryName'] == "society")
-    {
-        header("Location: society.php");
+        header("Location: informations.php");
     }
     
     

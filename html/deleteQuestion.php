@@ -17,7 +17,7 @@ function questions($results)
 
     $jsondata = json_decode(file_get_contents('php://input'), true);
 
-    if (isset($jsondata['ajax']) && isset($jsondata['id'])){
+    if (isset($jsondata['id'])){
         $records = $conn->prepare("DELETE FROM question WHERE id=:question_id");
         $records -> bindParam(':question_id', $jsondata['id']);
         $records->execute();

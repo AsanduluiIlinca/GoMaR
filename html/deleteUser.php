@@ -17,7 +17,7 @@ function users($results)
 
     $jsondata = json_decode(file_get_contents('php://input'), true);
 
-    if (isset($jsondata['ajax']) && isset($jsondata['id'])){
+    if (isset($jsondata['id'])){
         $records = $conn->prepare("DELETE FROM user WHERE id=:user_id");
         $records -> bindParam(':user_id', $jsondata['id']);
         $records->execute();

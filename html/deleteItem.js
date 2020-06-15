@@ -22,7 +22,7 @@ function deleteItem(path) {
 
         xmlhttp.open("POST", path);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xmlhttp.send(JSON.stringify({ "id": id, "ajax": 1}));
+        xmlhttp.send(JSON.stringify({ "id": id}));
 
 
     }

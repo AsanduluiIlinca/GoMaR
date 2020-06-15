@@ -1,6 +1,12 @@
 <?php
 include 'databaseConnection.php';
 session_start();
+if( !isset($_SESSION['admin'])){
+    header("Location: home.html");
+}
+if ($_SESSION['admin']==0 ){
+    header("Location: landing.php");
+}
 $records = $conn->prepare('SELECT id, question FROM question');
 $records->execute();
 $results = $records->fetchAll(PDO::FETCH_ASSOC);

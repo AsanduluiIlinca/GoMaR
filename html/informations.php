@@ -1,14 +1,12 @@
 <?php
     session_start();
     include 'databaseConnection.php';
-    // echo '<pre>'; print_r( $_SESSION); echo '</pre>';
 
     $stmt = $conn->prepare("SELECT * from informations WHERE category_id=:category_id");
     $stmt->bindParam(':category_id',  $_SESSION['categoryID']);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // echo '<pre>'; print_r( $result); echo '</pre>';
 
 ?>
 <!doctype html>
@@ -42,7 +40,7 @@
     <div class="container">
         <div class="central-container scrollable">
             <div class="title">
-            <?php echo $_SESSION['categoryName'].' references';?>
+            <?php echo ucfirst($_SESSION['categoryName']).' references';?>
             </div>
             <div class="description">
                 <ul>

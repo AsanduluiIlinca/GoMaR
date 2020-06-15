@@ -13,11 +13,11 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) :
    $message = '';
 
    if (count($results) > 0 && password_verify($_POST['password'], $results['password']) && $results['admin'] == '1') {
-
+      $_SESSION['admin'] = 1;
       $_SESSION['user_id'] = $results['id'];
       header("Location: landingAdmin.php");
    } else if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
-
+      $_SESSION['admin'] = 0;
       $_SESSION['user_id'] = $results['id'];
       header("Location: landing.php");
    } else {

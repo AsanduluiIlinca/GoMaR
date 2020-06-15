@@ -40,10 +40,10 @@ $results = $records->fetch(PDO::FETCH_ASSOC);
             <div class="title">
                 Admin attributes
             </div>
-            <span class="admin-button" onclick="window.location.href = 'addQuestion.php';">Add new questions</span>
             <span class="admin-button " onclick="window.location.href = 'deleteUser.php';">Delete a user</span>
-            <span class="admin-button " onclick="window.location.href = 'addInformation.php';">Add information</span>
+            <span class="admin-button" onclick="window.location.href = 'addQuestion.php';">Add new questions</span>
             <span class="admin-button " onclick="window.location.href = 'deleteQuestion.php';">Delete a question</span>
+            <span class="admin-button " onclick="window.location.href = 'addInformation.php';">Add information</span>
         </div>
     </div>
 </body>

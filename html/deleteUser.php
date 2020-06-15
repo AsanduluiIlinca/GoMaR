@@ -39,7 +39,7 @@ function users($results)
     <meta charset="utf-8">
     <title>GoMaR</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script type="text/javascript" src="userDelete.js"></script>
+    <script type="text/javascript" src="deleteItem.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 
@@ -66,7 +66,7 @@ function users($results)
             </div>
             <div>
                 <?php echo users($results); ?>
-                <span class="btn-home" onclick="deleteUser()">Delete</span>
+                <span class="btn-home" onclick="deleteItem('deleteUser.php')">Delete</span>
             </div>
         </div>
     </div>

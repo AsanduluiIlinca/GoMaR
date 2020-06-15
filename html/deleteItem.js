@@ -1,4 +1,4 @@
-function deleteUser() {
+function deleteItem(path) {
     var inputs = document.getElementsByClassName("inputs"); //lista de elemente cu numele inputs
     var id;
     for (var i = 0; i < inputs.length; i++) {
@@ -20,7 +20,7 @@ function deleteUser() {
             console.log(this.responseText);
         }
 
-        xmlhttp.open("POST", "deleteUser.php");
+        xmlhttp.open("POST", path);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.send(JSON.stringify({ "id": id, "ajax": 1}));
 

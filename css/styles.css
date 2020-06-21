@@ -294,7 +294,7 @@ body {
   border-radius: 10px;
 }
 .central-container .admin-button {
-  background-color: #36ABCB;
+  /* background-color: #36ABCB;
   text-align: center;
   color: white;
   font-family: Cambria;
@@ -307,7 +307,27 @@ body {
   font-size: 17px;
   border-radius: 10px;
   max-width: 170px;
+  overflow: hidden; */
+
+  text-align: center;
+  /* color: white; */
+  font-family: Cambria;
+  display: block;
+  /* cursor: pointer; */
+  position: relative;
+  /* padding: 10px 101px; */
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 10px;
+  max-width: 170px;
   overflow: hidden;
+  background-color: #36ABCB;
+  color: white;
+  padding: 1rem 1.5rem;
+  margin: 0.2rem 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 .central-container .b {
   text-align: center;

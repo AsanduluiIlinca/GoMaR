@@ -43,19 +43,19 @@ if ($_SESSION['admin'] == 0) {
                 Add a question
             </div>
             <form name="form" action="" method="POST">
-                <p>Enter the question.</p>
-                <input class="i" type="text" placeholder="Enter the question">
-                <p>Enter the right answer.</p>
-                <input class="i" type="text" placeholder="Enter the right answer">
-                <p>Enter the wrong answer.</p>
-                <input class="i" type="text" placeholder="Enter the wrong answer">
-                <p>Select the category:</p>
-                <select class="i" type="text" name="category">
-                    <option value="1">academic</option>
-                    <option value="2">family</option>
-                    <option value="3">group</option>
-                    <option value="4">society</option>
-                    <option value="5">work</option>
+                    <p>Enter the question.</p>
+                    <input  class="input-information" type="text" placeholder="Enter the question">
+                    <p>Enter the right answer.</p>
+                    <input  class="input-information" type="text" placeholder="Enter the right answer">
+                    <p>Enter the wrong answer.</p>
+                    <input  class="input-information" type="text" placeholder="Enter the wrong answer">
+                    <p>Select the category:</p>
+                    <select  class="input-information" type="text" name="category">
+                        <option value="1">academic</option>
+                        <option value="2">family</option>
+                        <option value="3">group</option>
+                        <option value="4">society</option>
+                        <option value="5">work</option>
                 </select>
             </form>
             <span class="admin-button " onclick="window.location.href = '';">Add question</span>

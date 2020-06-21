@@ -43,8 +43,11 @@ if ($_SESSION['admin'] == 0) {
                 Add a question
             </div>
             <form name="form" action="" method="POST">
+                <p>Enter the question.</p>
                 <input class="i" type="text" placeholder="Enter the question">
+                <p>Enter the right answer.</p>
                 <input class="i" type="text" placeholder="Enter the right answer">
+                <p>Enter the wrong answer.</p>
                 <input class="i" type="text" placeholder="Enter the wrong answer">
                 <p>Select the category:</p>
                 <select class="i" type="text" name="category">

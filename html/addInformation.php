@@ -7,6 +7,17 @@ if (!isset($_SESSION['admin'])) {
 if ($_SESSION['admin'] == 0) {
     header("Location: landing.php");
 }
+
+if (isset($_POST['upload'])){
+    echo "Intra in if";
+    $target = "./resources/".basename($_FILE['image']['name']);
+    $image  = $_FILE['image']['name'];
+    $link = $_POST['link_information'];
+    //$category = $_POST['input_information'];
+    $sql = "INSERT INTO informations (link_site, image) VALUES ('$link','$image')";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+}
 ?>
 
 <!doctype html>
@@ -48,19 +59,19 @@ if ($_SESSION['admin'] == 0) {
                 </div>
                 <div>
                 <p>Link to the site with information:</p>
-                    <input class="input-information" type="text" placeholder="Enter the new link">
+                    <input class="input-information" type="text" placeholder="Enter the new link" name="link_information">
                 </div>
                 <div>
                     <p>Select a category:</p>
                     <select class="input-information" type="text" name="category">
-                        <option value="1">academic</option>
+                        <option value="1" name = "academic">academic</option>
                         <option value="2">family</option>
                         <option value="3">group</option>
                         <option value="4">society</option>
                         <option value="5">work</option>
                     </select>
                 </div>
-                <span class="admin-button " onclick="window.location.href = '';">Add</span>
+                <span class="admin-button" name="upload" type ="submit" onclick="window.location.href = 'addInformation.php';">Add</span>
             </form>
         </div>
     </div>

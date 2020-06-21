@@ -10,12 +10,16 @@ if ($_SESSION['admin'] == 0) {
 
 if (isset($_POST['upload'])){
     echo "Intra in if";
-    $target = "./resources/".basename($_FILE['image']['name']);
-    $image  = $_FILE['image']['name'];
+    echo $_POST['category'];
+    $target = "../resources/".basename($_FILES['image']['name']);
+    $image  = $_FILES['image']['name'];
     $link = $_POST['link_information'];
-    //$category = $_POST['input_information'];
-    $sql = "INSERT INTO informations (link_site, image) VALUES ('$link','$image')";
+    $category = $_POST['category'];
+    $sql = "INSERT INTO informations (category_id, link_site, path_image) VALUES (:category, :link_site ,:path_image)";
     $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':link_site', $link);
+    $stmt->bindParam(':path_image', $target);
+    $stmt->bindParam(':category', $category);
     $stmt->execute();
 }
 ?>
@@ -71,7 +75,7 @@ if (isset($_POST['upload'])){
                         <option value="5">work</option>
                     </select>
                 </div>
-                <span class="admin-button" name="upload" type ="submit" onclick="window.location.href = 'addInformation.php';">Add</span>
+                <input class="admin-button" name="upload" type ="submit" onclick="window.location.href = 'addInformation.php';" value="Add">
             </form>
         </div>
     </div>

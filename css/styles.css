@@ -294,28 +294,10 @@ body {
   border-radius: 10px;
 }
 .central-container .admin-button {
-  /* background-color: #36ABCB;
   text-align: center;
-  color: white;
   font-family: Cambria;
   display: block;
-  cursor: pointer;
   position: relative;
-  padding: 14px 40px;
-  margin-right: 80px;
-  margin-top: 20px;
-  font-size: 17px;
-  border-radius: 10px;
-  max-width: 170px;
-  overflow: hidden; */
-
-  text-align: center;
-  /* color: white; */
-  font-family: Cambria;
-  display: block;
-  /* cursor: pointer; */
-  position: relative;
-  /* padding: 10px 101px; */
   margin-top: 20px;
   font-size: 17px;
   border-radius: 10px;

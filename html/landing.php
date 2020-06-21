@@ -48,8 +48,9 @@ session_start();
                 </p>
                 <div>
                     <span class="btn-home" onclick="window.location.href = 'category.php';">Category</span>
-                    <span class="btn-home" onclick="window.location.href = 'user.php';">User Profile</span>
+                    <span class="btn-home" onclick="window.location.href = 'user.php';">Recommendations based on profile</span>
                     <span class="btn-home" onclick="window.location.href = 'statistics.php';">Statistics</span>
+                    <span class="btn-home" onclick="window.location.href = 'profile.php';">Update Profile</span>
                 </div>
             </div>
         </div>

@@ -1,10 +1,12 @@
 <?php
 include 'databaseConnection.php';
 session_start();
-$records = $conn->prepare('SELECT admin FROM user WHERE id = :user_id');
-$records->bindParam(':user_id', $_SESSION['user_id']);
-$records->execute();
-$results = $records->fetch(PDO::FETCH_ASSOC);
+if (!isset($_SESSION['admin'])) {
+    header("Location: home.html");
+}
+if ($_SESSION['admin'] == 0) {
+    header("Location: landing.php");
+}
 
 ?>
 
@@ -41,8 +43,11 @@ $results = $records->fetch(PDO::FETCH_ASSOC);
                 Add a question
             </div>
             <form name="form" action="" method="POST">
+                <p>Enter the question.</p>
                 <input class="i" type="text" placeholder="Enter the question">
+                <p>Enter the right answer.</p>
                 <input class="i" type="text" placeholder="Enter the right answer">
+                <p>Enter the wrong answer.</p>
                 <input class="i" type="text" placeholder="Enter the wrong answer">
                 <p>Select the category:</p>
                 <select class="i" type="text" name="category">

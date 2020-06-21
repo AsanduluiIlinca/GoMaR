@@ -37,11 +37,6 @@ if (isset($jsondata['question']) && isset($jsondata['rightAnswer']) && isset($js
     $record->bindParam(':answer', $jsondata['wrongAnswer']);
     $record->bindParam(':valid', $valid);
     $record->execute();
-
-
-    // $stmt = $conn->prepare("DELETE FROM answer WHERE question_id=:question_id");
-    // $stmt->bindParam(':question_id', $jsondata['id']);
-    // $stmt->execute();
     exit;
 }
 ?>

@@ -15,6 +15,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) :
    if (count($results) > 0 && password_verify($_POST['password'], $results['password']) && $results['admin'] == '1') {
       $_SESSION['admin'] = 1;
       $_SESSION['user_id'] = $results['id'];
+      $_SESSION['username'] = $results['username'];
       header("Location: landingAdmin.php");
    } else if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
       $_SESSION['admin'] = 0;

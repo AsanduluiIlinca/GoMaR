@@ -76,7 +76,6 @@ button:hover {
 }
 .container-popUp {
   padding: 16px;
-  border: 5%;
   padding: 5%;
   margin: auto;
   width: 100%;
@@ -400,7 +399,6 @@ body {
 }
 .scrollable {
   overflow-y: scroll;
-  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 /*Face sa dispara bara de scroll*/

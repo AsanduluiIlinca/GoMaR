@@ -94,7 +94,6 @@ select {
 }
 
 .boxcontent {
-  border: 5%;
   padding: 5%;
   margin: auto;
   width: 40%;
@@ -118,7 +117,6 @@ input#prev:hover, input#next:hover {
 
 .scrollable {
   overflow-y: scroll;
-  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 

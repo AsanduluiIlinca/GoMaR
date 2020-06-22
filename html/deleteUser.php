@@ -45,14 +45,14 @@ function users($results)
     <meta charset="utf-8">
     <title>GoMaR</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script type="text/javascript" src="deleteItem.js"></script>
+    <script src="deleteItem.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 
 <body>
 <div class="navbar">
         <div class="container">
-            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" href="landingAdmin.php">
+            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href ='landingAdmin.php';">
             <div class="right-section">
                 <div class="btn" onclick="window.location.href = 'statistics.php';">
                     <img alt="GoMar Statistics" src="../resources/statistics-icon.svg" class="icon">

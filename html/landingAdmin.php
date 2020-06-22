@@ -23,7 +23,7 @@ if ($_SESSION['admin']==0 ){
 <body>
     <div class="navbar">
         <div class="container">
-            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" href="landingAdmin.php">
+            <img alt="GoMar Logo" src="../resources/logo.svg" class="logo" onclick="window.location.href = 'landingAdmin.php';">
             <div class="right-section">
                 <div class="btn" onclick="window.location.href = 'statistics.php';">
                     <img alt="GoMar Statistics" src="../resources/statistics-icon.svg" class="icon">

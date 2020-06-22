@@ -67,8 +67,8 @@ if (isset($_POST['upload'])){
                 </div>
                 <div>
                     <p>Select a category:</p>
-                    <select class="input-information" type="text" name="category">
-                        <option value="1" name = "academic">academic</option>
+                    <select class="input-information" name="category">
+                        <option value="1">academic</option>
                         <option value="2">family</option>
                         <option value="3">group</option>
                         <option value="4">society</option>

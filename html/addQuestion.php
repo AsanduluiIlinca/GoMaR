@@ -49,7 +49,7 @@ if (isset($jsondata['question']) && isset($jsondata['rightAnswer']) && isset($js
     <meta charset="utf-8">
     <title>GoMaR</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script type="text/javascript" src="addItem.js"></script>
+    <script src="addItem.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 
@@ -74,7 +74,7 @@ if (isset($jsondata['question']) && isset($jsondata['rightAnswer']) && isset($js
             <div class="title">
                 Add a question
             </div>
-            <form name="form" action="" method="POST">
+            <form name="form" method="POST">
                 <p>Enter the question.</p>
                 <input class="input-information" type="text" placeholder="Enter the question">
                 <p>Enter the right answer.</p>
@@ -82,7 +82,7 @@ if (isset($jsondata['question']) && isset($jsondata['rightAnswer']) && isset($js
                 <p>Enter the wrong answer.</p>
                 <input class="input-information" type="text" placeholder="Enter the wrong answer">
                 <p>Select the category:</p>
-                <select class="input-information" type="text" id="category" name="category">
+                <select class="input-information" id="category" name="category">
                     <option value="1">academic</option>
                     <option value="2">family</option>
                     <option value="3">group</option>
@@ -90,7 +90,7 @@ if (isset($jsondata['question']) && isset($jsondata['rightAnswer']) && isset($js
                     <option value="5">work</option>
                 </select>
                 <p>Select the difficulty:</p>
-                <select class="input-information" type="text" id="difficulty" name="difficulty">
+                <select class="input-information" id="difficulty" name="difficulty">
                     <option value="10">10</option>
                     <option value="20">20</option>
                     <option value="30">30</option>

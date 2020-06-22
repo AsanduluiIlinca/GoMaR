@@ -29,51 +29,51 @@
     <div class="container">
         <div class="central-container scrollable">
             <div class="slider">
-  
+
                 <a href="#slide-1">1</a>
                 <a href="#slide-2">2</a>
                 <a href="#slide-3">3</a>
                 <a href="#slide-4">4</a>
                 <a href="#slide-5">5</a>
-              
+
                 <div class="slides">
-                  <div id="slide-1">
-                    <a href="setCategory.php?categoryName=academic" onclick="post">
-                        <input alt="image" type="image" class="image" src="../resources/academic1.jpg" name="academic">
-                    </a>
-                    <div class="category-title">Academic</div>
-                
-                  </div>
-                  <div id="slide-2">
-                    <a href="setCategory.php?categoryName=family" onclick="post">
-                        <input alt="image" type="image" class="image" src="../resources/family2.jpg">
-                    </a>
-                    <div class="category-title">Family</div>
-                   
-                  </div>
-                  <div id="slide-3">
-                    <a  href="setCategory.php?categoryName=group" onclick="post">
-                        <input alt="image" type="image" class="image" src="../resources/group.jpg">
-                    </a>
-                    <div class="category-title">Group</div>
-                   
-                  </div>
-                  <div id="slide-4">
-                    <a href="setCategory.php?categoryName=society" onclick="post">
-                        <input alt="image" type="image" class="image" src="../resources/society.jpg">
-                    </a>
-                    <div class="category-title">Society</div>
-                   
-                  </div>
-                  <div id="slide-5">
-                    <a href="setCategory.php?categoryName=work" onclick="post">
-                        <input alt="image" type="image" class="image" src="../resources/work.jpg">
-                    </a>
-                    <div class="category-title">Work</div>
-                   
-                  </div>
+                    <div id="slide-1">
+                        <a href="setCategory.php?categoryName=academic" onclick="post">
+                            <img alt="image" class="image" src="../resources/academic1.jpg">
+                        </a>
+                        <div class="category-title">Academic</div>
+
+                    </div>
+                    <div id="slide-2">
+                        <a href="setCategory.php?categoryName=family" onclick="post">
+                            <img alt="image" class="image" src="../resources/family2.jpg">
+                        </a>
+                        <div class="category-title">Family</div>
+
+                    </div>
+                    <div id="slide-3">
+                        <a href="setCategory.php?categoryName=group" onclick="post">
+                            <img alt="image" class="image" src="../resources/group.jpg">
+                        </a>
+                        <div class="category-title">Group</div>
+
+                    </div>
+                    <div id="slide-4">
+                        <a href="setCategory.php?categoryName=society" onclick="post">
+                            <img alt="image" class="image" src="../resources/society.jpg">
+                        </a>
+                        <div class="category-title">Society</div>
+
+                    </div>
+                    <div id="slide-5">
+                        <a href="setCategory.php?categoryName=work" onclick="post">
+                            <img alt="image" class="image" src="../resources/work.jpg">
+                        </a>
+                        <div class="category-title">Work</div>
+
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
 

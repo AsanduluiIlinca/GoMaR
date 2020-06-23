@@ -9,7 +9,6 @@ if ($_SESSION['admin'] == 0) {
 }
 
 if (isset($_POST['upload'])){
-    echo "Intra in if";
     echo $_POST['category'];
     $target = "../resources/".basename($_FILES['image']['name']);
     $image  = $_FILES['image']['name'];
@@ -29,7 +28,7 @@ if (isset($_POST['upload'])){
       } else {
          echo "Upload failed";
       }
-
+    }
 ?>
 
 <!doctype html>

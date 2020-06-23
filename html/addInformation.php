@@ -8,9 +8,8 @@ if ($_SESSION['admin'] == 0) {
     header("Location: landing.php");
 }
 
-if (isset($_POST['upload'])){
-    echo $_POST['category'];
-    $target = "../resources/".basename($_FILES['image']['name']);
+if (isset($_POST['upload'])) {
+    $target = "../resources/" . basename($_FILES['image']['name']);
     $image  = $_FILES['image']['name'];
     $link = $_POST['link_information'];
     $category = $_POST['category'];
@@ -21,14 +20,10 @@ if (isset($_POST['upload'])){
     $stmt->bindParam(':category', $category);
     $stmt->execute();
 
-    $uploadFile = "../resources/"; //Direct link to image
+    $uploadFile = "../resources/";
     $uploadimg = $uploadFile . basename($_FILES['image']['name']);
-    if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadimg)) {
-        echo "File is valid, and was successfully uploaded.\n";
-      } else {
-         echo "Upload failed";
-      }
-    }
+    move_uploaded_file($_FILES['image']['tmp_name'], $uploadimg);
+}
 ?>
 
 <!doctype html>
@@ -65,11 +60,11 @@ if (isset($_POST['upload'])){
             </div>
             <form method="POST" action="addInformation.php" enctype="multipart/form-data">
                 <div>
-                <p>Choose a image for the information link.</p>
+                    <p>Choose a image for the information link.</p>
                     <input type="file" name="image">
                 </div>
                 <div>
-                <p>Link to the site with information:</p>
+                    <p>Link to the site with information:</p>
                     <input class="input-information" type="text" placeholder="Enter the new link" name="link_information">
                 </div>
                 <div>
@@ -82,7 +77,7 @@ if (isset($_POST['upload'])){
                         <option value="5">work</option>
                     </select>
                 </div>
-                <input class="admin-button" name="upload" type ="submit" onclick="window.location.href = 'addInformation.php';" value="Add">
+                <input class="admin-button" name="upload" type="submit" onclick="window.location.href = 'addInformation.php';" value="Add">
             </form>
         </div>
     </div>

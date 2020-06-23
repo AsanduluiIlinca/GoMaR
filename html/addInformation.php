@@ -9,8 +9,6 @@ if ($_SESSION['admin'] == 0) {
 }
 
 if (isset($_POST['upload'])){
-    echo "Intra in if";
-    echo $_POST['category'];
     $target = "../resources/".basename($_FILES['image']['name']);
     $image  = $_FILES['image']['name'];
     $link = $_POST['link_information'];
@@ -22,7 +20,7 @@ if (isset($_POST['upload'])){
     $stmt->bindParam(':category', $category);
     $stmt->execute();
 
-    $uploadFile = "../resources/";//Direct link to image
+    $uploadFile = "../resources/"; //Direct link to image
     $uploadimg = $uploadFile . basename($_FILES['image']['name']);
     if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadimg)) {
         echo "File is valid, and was successfully uploaded.\n";

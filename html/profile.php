@@ -122,18 +122,19 @@
                 <form name="form1" method="POST">
 
                         <label><b>First Name</b></label>
-                        <input type="text" placeholder="Enter first name" name="firstname"  required>
+                        <input type="text" value="<?php echo $results['firstname']; ?>" name="firstname"  required>
                         
                         <label><b>Last Name</b></label>
-                        <input type="text" placeholder="Enter last name" name="lastname"  required> 
+                        <input type="text"  value="<?php echo $results['lastname']; ?>" name="lastname"  required> 
 
                         <label><b>Birthday</b></label>
-                        <input type="date" name="birthday" >
+                        <input type="date" name="birthday" value="<?php echo $results['birthday']; ?>" >
                             
                         <label><b>Gender</b></label>
                         <select name="gender" >
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
+                            <option value="" selected disabled hidden><?php echo $results['gender']; ?></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
                         </select>
 
                         <input class="button" id="next" type="submit" name="submit_1" onclick="window.location.href ='#slider-2';" value="Next">
@@ -149,21 +150,23 @@
                 <form name="form2" method="POST">
                         <label><b>Social status</b></label>
                         <select name="social_status">
+                            <option value="" selected disabled hidden><?php echo $results['social_status']; ?></option>
                             <option value="Married">Married</option>
                             <option value="Unmarried">Unmarried</option>
                         </select>
                         
                         <label><b>Employee</b></label>
                         <select name="employed">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="" selected disabled hidden><?php echo $results['employed']; ?></option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
                         </select>
 
                         <label><b>Working place</b></label>
-                        <input type="text" placeholder=" Enter working place" name="working_place" required> 
+                        <input type="text" value="<?php echo $results['working_place']; ?>" name="working_place" required> 
                             
                         <label><b>Job</b></label>
-                        <input type="text" placeholder="Enter job" name="job" required> 
+                        <input type="text" value="<?php echo $results['job']; ?>" name="job" required> 
                     
                         <input class="button" id="prev2" type="submit" name="submit_1" onclick="window.location.href ='#slider-1';" value="Back">
                         <input class="button" id="next2" type="submit" name="submit_2" onclick="window.location.href ='#slider-3';" value="Next">	
@@ -176,19 +179,19 @@
             <div class="boxcontent">
                 <form name="form3" method="POST">
                         <label><b>Country</b></label>
-                        <input type="text" placeholder="Country name" name="country" required>
+                        <input type="text" value="<?php echo $results['country']; ?>" name="country" required>
                         
                         <label><b>Town</b></label>
-                        <input type="text" placeholder="Town" name="town" required> 
+                        <input type="text" value="<?php echo $results['town']; ?>" name="town" required> 
 
                         <label><b>Ethnicity</b></label>
-                        <input type="text" placeholder="Ethnicity" name="ethnicity" required> 
+                        <input type="text" value="<?php echo $results['ethnicity']; ?>" name="ethnicity" required> 
                             
                         <label><b>Languages</b></label>
-                        <input type="text" placeholder="Language" name="languages" required> 
+                        <input type="text" value="<?php echo $results['languages']; ?>" name="languages" required> 
 
                         <input class="button" id="prev3" type="submit" name="submit_2" onclick="window.location.href ='#slider-2';" value="Back">
-                        <input class="button" id="next3" type="submit" name="submit_3" onclick="window.location.href ='landing.html';" value="Next">		
+                        <input class="button" id="next3" type="submit" name="submit_3" onclick="window.location.href ='landing.php';" value="Next">		
             
                 </form>	
                 </div>

@@ -251,6 +251,7 @@
                 <input class="answer-btn" type="submit" name="submit" onclick="post" value='Sent your answers'>
             </div>
         </div>
+    </div>
     </form>
 </body>
 
